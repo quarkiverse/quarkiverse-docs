@@ -27,5 +27,7 @@ jobs:
       - name: Publish to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
+          # Build directory to deploy
+          build_dir: build/site
           # Allow Jekyll to build your site
           jekyll: false
