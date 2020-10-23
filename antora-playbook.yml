@@ -1,13 +1,11 @@
 site:
   title: Quarkiverse Documentation
   url: https://docs.quarkiverse.io
-  start_page: component-b::index.adoc
+  start_page: quarkiverse-freemarker::index.adoc
 content:
   sources: 
-  - url: https://gitlab.com/antora/demo/demo-component-a.git
-    branches: master
-  - url: https://gitlab.com/antora/demo/demo-component-b.git
-    branches: [v2.0, v1.0]
+  - url: https://github.com/quarkiverse/quarkiverse-freemarker.git
+    branches: [antora]
     start_path: docs
 ui:
   bundle:
