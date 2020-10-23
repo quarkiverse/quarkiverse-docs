@@ -1,6 +1,6 @@
 site:
   title: Quarkiverse Documentation
-  url: https://docs.quarkiverse.io
+  url: https://quarkiverse.github.io/quarkiverse-docs/
   start_page: quarkiverse-freemarker::index.adoc
 content:
   sources: 
