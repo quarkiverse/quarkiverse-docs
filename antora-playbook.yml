@@ -6,7 +6,7 @@ site:
 content:
   sources:
   - url: https://github.com/quarkiverse/quarkiverse-freemarker.git
-    branches: [antora]
+    branches: [master]
     start_path: docs
 ui:
   bundle:
