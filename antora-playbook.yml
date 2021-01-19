@@ -5,10 +5,10 @@ site:
 
 content:
   sources:
-  - url: https://github.com/quarkiverse/quarkiverse-freemarker.git
+  - url: https://github.com/quarkiverse/quarkus-freemarker.git
     branches: [master]
     start_path: docs
-  - url: https://github.com/quarkiverse/quarkiverse-github-app.git
+  - url: https://github.com/quarkiverse/quarkus-github-app.git
     branches: [master]
     start_path: docs
 ui:
