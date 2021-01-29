@@ -13,7 +13,10 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-rabbitmq-client.git
       branches: [master]
-      start_path: docs 
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-mybatis.git
+      branches: [master]
+      start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
