@@ -22,9 +22,9 @@
         <div class="navbar-item has-dropdown is-hoverable">
           <div class="navbar-link">Projects</div>
           <div class="navbar-dropdown">
-            <div class="navbar-item"><strong>Docs</strong></div>
-            <a class="navbar-item" href="https://github.com/quarkiverse/quarkiverse-docs">Repository</a>
-            <a class="navbar-item" href="https://github.com/quarkiverse/quarkiverse-docs/issues">Issue Tracker</a>
+{{#each site.components}}
+            <a class="navbar-item" href="{{{relativize ./latestVersion/url}}}">{{{./title}}}</a>
+{{/each}}
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">

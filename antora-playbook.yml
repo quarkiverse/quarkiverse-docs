@@ -1,10 +1,12 @@
 site:
   title: Quarkiverse Documentation
   url: https://quarkiverse.github.io/quarkiverse-docs/
-  start_page: quarkiverse-freemarker::index.adoc
+  start_page: index::index.adoc
 
 content:
   sources:
+    - url: . # common module containing just the main index
+      branches: HEAD
     - url: https://github.com/quarkiverse/quarkus-freemarker.git
       branches: [master]
       start_path: docs
