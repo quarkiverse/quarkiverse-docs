@@ -28,6 +28,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-cxf.git
       branches: [ master ]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-logging-splunk.git
+      branches: [ main ]
+      start_path: docs
 
 ui:
   bundle:
