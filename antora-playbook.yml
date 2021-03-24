@@ -11,7 +11,7 @@ content:
       branches: [master]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-app.git
-      branches: [master]
+      branches: [main]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-rabbitmq-client.git
       branches: [master]
