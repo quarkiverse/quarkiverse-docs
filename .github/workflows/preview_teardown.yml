@@ -17,4 +17,4 @@ jobs:
           teardown: 'true'
           failOnError: 'false'
           build: |
-            echo Deploying to surge.sh
+            echo Undeploying from surge.sh

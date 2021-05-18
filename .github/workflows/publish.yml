@@ -32,7 +32,7 @@ jobs:
         with:
           # Build directory to deploy
           build_dir: build/site
-          # Allow Jekyll to build your site
+          # Do not allow Jekyll to build your site
           jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
