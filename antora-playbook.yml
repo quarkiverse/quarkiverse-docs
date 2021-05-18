@@ -8,28 +8,28 @@ content:
     - url: . # common module containing just the main index
       branches: HEAD
     - url: https://github.com/quarkiverse/quarkus-freemarker.git
-      branches: [master]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-app.git
-      branches: [main]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-rabbitmq-client.git
-      branches: [master]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mybatis.git
-      branches: [master]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-unleash.git
-      branches: [master]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mockk.git
-      branches: [ master ]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cxf.git
-      branches: [master, v*]
+      branches: [HEAD, v*]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-logging-splunk.git
-      branches: [ main ]
+      branches: HEAD
       start_path: docs
 
 ui:
