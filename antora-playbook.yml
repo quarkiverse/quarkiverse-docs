@@ -26,7 +26,7 @@ content:
       branches: [ master ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cxf.git
-      branches: [ master ]
+      branches: [master, v*]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-logging-splunk.git
       branches: [ main ]
