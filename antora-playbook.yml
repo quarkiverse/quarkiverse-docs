@@ -18,7 +18,7 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mybatis.git
       branches: HEAD
-      start_path: docs
+      start_path: mybatis/docs
     - url: https://github.com/quarkiverse/quarkus-unleash.git
       branches: HEAD
       start_path: docs
