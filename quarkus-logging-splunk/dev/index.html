@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quarkus logging splunk :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-logging-splunk/dev/index.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-logging-splunk" data-version="dev">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus Logging Splunk</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Quarkus logging splunk</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus Logging Splunk</span>
+    <span class="version">dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-cxf/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-cxf/0.9/index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-github-app/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-rabbitmq-client/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-unleash/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus Logging Splunk</a></li>
+    <li><a href="index.html">Quarkus logging splunk</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-logging-splunk/edit/main/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Quarkus logging splunk</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://www.splunk.com/en_us/software/splunk-enterprise.html">Splunk</a> is a middleware
+solution that receives, stores, indexes and finally allows to exploit the logs of an application.</p>
+</div>
+<div class="paragraph">
+<p>This Quarkus extension provides the support of the official Splunk client library to index log events through the HTTP Event collection, provided by Splunk enterprise solution.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The official client is an opensource library available <a href="https://github.com/splunk/splunk-library-javalogging">here</a>.</p>
+</li>
+<li>
+<p>The documentation of HTTP Event collection can be found <a href="https://docs.splunk.com/Documentation/Splunk/8.1.1/Data/UsetheHTTPEventCollector">here</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to use this extension, you need to add the <code>quarkus-logging-splunk</code> extension first.
+In your <code>pom.xml</code> file, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.quarkiverse.logging.splunk&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-logging-splunk&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_convention"><a class="anchor" href="#_convention"></a>Convention</h3>
+<div class="paragraph">
+<p>This extension follows the <code>log handlers</code> configuration domain that is defined by Quarkus, every configuration property of this extension will belong to the following configuration root : <code>quarkus.log.handler.splunk</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_default_behaviour"><a class="anchor" href="#_default_behaviour"></a>Default behaviour</h3>
+<div class="paragraph">
+<p>When used this extension is enabled by default, meaning the the client would expect a valid connection to a Splunk indexer and would print an error message for every log created by the application.</p>
+</div>
+<div class="paragraph">
+<p>So in local environment, the log handler can be disabled with the following property :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.log.handler.splunk.enabled=false</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extension_configuration_reference"><a class="anchor" href="#_extension_configuration_reference"></a>Extension Configuration Reference</h3>
+<div class="paragraph">
+<p>Every configuration property of the extension is overridable at runtime.</p>
+</div>
+<div class="paragraph configuration-legend">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+</div>
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<colgroup>
+<col style="width: 80%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-log-handler-splunk_configuration"></a><a href="#quarkus-log-handler-splunk_configuration">Configuration property</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.enabled"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.enabled">quarkus.log.handler.splunk.enabled</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Determine whether to enable the handler</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.level"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.level">quarkus.log.handler.splunk.level</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The splunk handler log level. By default it is not more strict than the root handler level.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.jboss.org/jbossas/javadoc/7.1.2.Final/org/jboss/logmanager/Level.html">Level</a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>ALL</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.url"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.url">quarkus.log.handler.splunk.url</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Splunk HEC endpoint base url.
+ The actual endpoint is expected at path /services/collector/events/1.0</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code><a href="https://localhost:8088/" class="bare">https://localhost:8088/</a></code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.disable-certificate-validation"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.disable-certificate-validation">quarkus.log.handler.splunk.disable-certificate-validation</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Disable TLS certificate validation with HEC endpoint</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.token"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.token">quarkus.log.handler.splunk.token</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The application token to authenticate with HEC, the token is mandatory if the extension is enabled <a href="https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#HEC_token" class="bare">https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#HEC_token</a></p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.send-mode"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.send-mode">quarkus.log.handler.splunk.send-mode</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The strategy to send events to HEC.
+ In sequential mode, there is only one HTTP connection to HEC and the order of events is preserved, but performance is lower. In parallel mode, event batches are sent asynchronously over multiple HTTP connections, and events with the same timestamp (that has 1 millisecond resolution) may be indexed out of order by Splunk.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>sequential</code>, <code>parallel</code></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>sequential</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.channel"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.channel">quarkus.log.handler.splunk.channel</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>A GUID to identify an HEC client and guarantee isolation at HEC level in case of slow clients. <a href="https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/AboutHECIDXAck#About_channels_and_sending_data" class="bare">https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/AboutHECIDXAck#About_channels_and_sending_data</a></p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.batch-interval"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.batch-interval">quarkus.log.handler.splunk.batch-interval</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Batching delay before sending a group of events. If 0, the events are sent immediately.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html">Duration</a>
+  <a href="#duration-note-anchor" title="More information about the Duration format"><span class="icon"><i class="fa fa-question-circle"></i></span></a></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10S</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.batch-size-count"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.batch-size-count">quarkus.log.handler.splunk.batch-size-count</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Maximum number of events in a batch. By default 10, if 0 no batching.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.batch-size-bytes"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.batch-size-bytes">quarkus.log.handler.splunk.batch-size-bytes</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Maximum total size in bytes of events in a batch. By default 10KB, if 0 no batching.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.max-retries"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.max-retries">quarkus.log.handler.splunk.max-retries</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Maximum number of retries in case of I/O exceptions with HEC connection.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.format"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.format">quarkus.log.handler.splunk.format</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The log format, defining which metadata are inlined inside the log main payload.
+ Specific metadata (hostname, category, thread name, &#8230;&#8203;), as well as MDC key/value map, can also be sent in a structured way.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.include-exception"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.include-exception">quarkus.log.handler.splunk.include-exception</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Whether to send the thrown exception message as a structured metadata of the log event (as opposed to %e in a formatted message, it does not include the exception name or stacktrace)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.include-logger-name"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.include-logger-name">quarkus.log.handler.splunk.include-logger-name</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Whether to send the logger name as a structured metadata of the log event (equivalent of %c in a formatted message)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.include-thread-name"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.include-thread-name">quarkus.log.handler.splunk.include-thread-name</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Whether to send the thread name as a structured metadata of the log event (equivalent of %t in a formatted message)</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-host"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-host">quarkus.log.handler.splunk.metadata-host</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Overrides the host name metadata value.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>The equivalent of %h in a formatted message</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-source"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-source">quarkus.log.handler.splunk.metadata-source</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The source value to assign to the event data. For example, if you&#8217;re sending data from an app you&#8217;re developing, you could set this key to the name of the app. <a href="https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#Event_metadata" class="bare">https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#Event_metadata</a></p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-source-type"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-source-type">quarkus.log.handler.splunk.metadata-source-type</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The source type value to assign to the event data <a href="https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#Event_metadata" class="bare">https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#Event_metadata</a>
+ A given source type may have indexed fields extraction enabled, which is the case of the default built-in _json.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>_json</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-index"></a><code><a href="#quarkus-log-handler-splunk_quarkus.log.handler.splunk.metadata-index">quarkus.log.handler.splunk.metadata-index</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>The optional name of the index by which the event data is to be stored. If set, it must be within the list of allowed indexes of the token (if it has the indexes parameter set). <a href="https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#Event_metadata" class="bare">https://docs.splunk.com/Documentation/Splunk/8.1.0/Data/FormateventsforHTTPEventCollector#Event_metadata</a></p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+</tbody>
+</table>
+<div id="duration-note-anchor" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">About the Duration format</div>
+<div class="paragraph">
+<p>The format for durations uses the standard <code>java.time.Duration</code> format.
+You can learn more about it in the <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html#parse-java.lang.CharSequence-">Duration#parse() javadoc</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can also provide duration values starting with a number.
+In this case, if the value consists only of a number, the converter treats the value as seconds.
+Otherwise, <code>PT</code> is implicitly prepended to the value to obtain a standard <code>java.time.Duration</code> format.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The extension can be used transparently with any log frontend used by Quarkus (Log4j, SLF4J, &#8230;&#8203; )</p>
+</div>
+<div class="paragraph">
+<p>The default log format of the extension is the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.log.handler.splunk.format="%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{3.}] (%t) %s%e%n"</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_connectivity_failures"><a class="anchor" href="#_connectivity_failures"></a>Connectivity failures</h3>
+<div class="paragraph">
+<p>Batched events that cannot be sent to the Splunk indexer will be logged to stdout:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Formatted using console handler settings if the console handler is enabled</p>
+</li>
+<li>
+<p>Formatted using splunk handler settings otherwise</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In any case, the root cause of the failure is always logged to stderr.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mdc_support"><a class="anchor" href="#_mdc_support"></a>MDC support</h3>
+<div class="paragraph">
+<p>In addition to the original client library this extension provides the support of the resolution of MDC scoped properties as defined in <a href="https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.0/html/configuration_guide/logging_with_jboss_eap#log_formatters">JBoss supported formatters</a>.
+Then properties are sent as <a href="https://docs.splunk.com/Splexicon\:Indexedfield">indexed fields</a> in the Splunk log event.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

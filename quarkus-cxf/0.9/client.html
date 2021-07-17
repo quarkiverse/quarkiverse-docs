@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SOAP Clients :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-cxf/dev/client.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-cxf" data-version="0.9">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus CXF</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">CXF Extension for Quarkus</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#native-mode-support">Native Mode Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#contract-code-first">Contract vs Code First</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#sample-code-integration-tests">Sample Code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#issues-and-support">Issues and Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="server.html">Creating a SOAP Web Service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="server.html#wsdl-url">WSDL URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="server.html#soap-annotations">SOAP Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="client.html">Creating a SOAP Client</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#basic-auth">Basic Auth</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#async-support">Asynchronous Client HTTP Transport</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="interceptors-and-features.html">Interceptors and Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ws-security.html">WS-Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ws-security.html#ws-security-service">Web Service Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ws-security.html#ws-security-client">Client Integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="properties.html">Properties Reference</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="tips-and-tricks.html">Tips &amp; tricks</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus CXF</span>
+    <span class="version">0.9</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev/index.html">dev</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-github-app/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-logging-splunk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-rabbitmq-client/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-unleash/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus CXF</a></li>
+    <li><a href="client.html">Creating a SOAP Client</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">0.9</button>
+  <div class="version-menu">
+    <a class="version" href="../dev/client.html">dev</a>
+    <a class="version is-current" href="client.html">0.9</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-cxf/edit/v0.9/docs/modules/ROOT/pages/client.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">SOAP Clients</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Quarkus-CXF supports SOAP clients. Assuming a given SEI like <code>FruitWebService</code>, Quarkus-CXF is able to inject a ready-to-use client proxy:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import com.example.FruitWebService;                   // SEI
+import javax.enterprise.context.ApplicationScoped;
+import io.quarkiverse.cxf.annotation.CXFClient;
+
+@Application  // or any other CDI scope
+public class MySoapClient {
+
+    @Inject @CXFClient
+    FruitWebService clientService;
+
+    public int getCount() {
+        return this.clientService.count();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Without any further configuration Quarkus-CXF assumes a service to be published at <a href="http://localhost:8080/{service-path}" class="bare">http://localhost:8080/{service-path}</a>, where <code>{service-path}</code> is derived from</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>config property <code>quarkus.cxf.path</code> (if present); and the</p>
+</li>
+<li>
+<p>SEI’s lowercased class name</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Given <code>quarkus.cxf.path=/ws</code>, Quarkus-CXF would use <a href="http://localhost:8080/ws/com.example.fruitwebservice" class="bare">http://localhost:8080/ws/com.example.fruitwebservice</a> as <code>FruitWebService</code> 's endpoint URL and otherwise just  <a href="http://localhost:8080/ws/com.example.fruitwebservice" class="bare">http://localhost:8080/ws/com.example.fruitwebservice</a>.</p>
+</div>
+<div class="paragraph">
+<p>Various SOAP client properties can be configured. To do so, prefix <code>quarkus.cxf.client.{name}</code> creates a logical client configuration unit. The name of such a unit, here denoted as <code>{name}</code>, can be arbitrarily choosen as long as not (whitespace) empty. The following properties are available on such a configuration unit:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>client-endpoint-url</code></p>
+</li>
+<li>
+<p><code>endpoint-name</code></p>
+</li>
+<li>
+<p><code>endpoint-namespace</code></p>
+</li>
+<li>
+<p><code>features</code></p>
+</li>
+<li>
+<p><code>in-fault-interceptors</code></p>
+</li>
+<li>
+<p><code>in-interceptors</code></p>
+</li>
+<li>
+<p><code>out-fault-interceptors</code></p>
+</li>
+<li>
+<p><code>out-fnterceptors</code></p>
+</li>
+<li>
+<p><code>password</code></p>
+</li>
+<li>
+<p><code>service-interface</code></p>
+</li>
+<li>
+<p><code>username</code></p>
+</li>
+<li>
+<p><code>wsdl</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A typical example configuration example is given below. Here unit name <code>my-fruitservice-client</code> is used. The goal of this configuration is the change the service endpoint address to <a href="http://localhost:8080/fruit" class="bare">http://localhost:8080/fruit</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.cxf.client."my-fruitservice-client".service-interface=com.example.FruitWebService
+quarkus.cxf.client."my-fruitservice-client".client-endpoint-url=http://localhost:8080/fruit</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Another way of applying a client configuration is to use it directly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject @CXFClient("my-fruitservice-client")
+FruitWebService clientService;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here Quarkus-CXF uses configuration unit <code>my-fruitservice-client</code> for setting up a SOAP client <code>clientService</code> by scanning configuration units for a unit with that name. It is an error to use a unit name which does not exist.</p>
+</div>
+<div class="paragraph">
+<p>If <code>@CXFClient</code> is used without a unit name Quarkus-CXF identifies matching configuration by scanning for a unit where property <code>service-interface</code> <em>matches</em> the SEI to be injected. Such a matching configuration is the <em>default</em> configuration for that SEI. The purpose of property <code>service-interface</code> is therefore to identify the matching SEI.</p>
+</div>
+<div class="paragraph">
+<p>Default configurations must be unique per SEI while it is otherwise perfectly valid to have multiple client configuration units per SEI. Consider this example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.cxf.client."my-fruitservice-client".service-interface=com.example.FruitWebService
+quarkus.cxf.client."my-fruitservice-client".client-endpoint-url=http://localhost:8080/fruit
+
+quarkus.cxf.client."my-featured-fruitservice-client".client-endpoint-url=http://localhost:8080/fruit
+quarkus.cxf.client."my-featured-fruitservice-client".features=org.apache.cxf.feature.LoggingFeature</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here a second configuration named <code>my-featured-fruitservice-client</code> has been defined in addition to
+<code>my-fruitservice-client</code>. This second configuration applies a standard CXF logging feature which can
+be useful for tracing or debugging. An example for the purpose of illustration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import com.example.FruitWebService;
+import javax.enterprise.context.ApplicationScoped;
+import io.quarkiverse.cxf.annotation.CXFClient;
+
+@Application    // or any other CDI scope
+public class MySoapClient {
+
+    private boolean logging = ..  // depending on context, logging is on or off
+
+    @Inject @CXFClient("my-featured-fruitservice-client")
+    FruitWebService featuredClientService;
+
+    @Inject @CXFClient
+    FruitWebService clientService;
+
+    public int getCount() {
+        return (logging ? featuredClientService : clientService).count();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the absence of property <code>service-interface</code> in quarkus.cxf.client."my-featured-fruitservice-client" cause this configuration is meant to be an alternative to the default configuration.</p>
+</div>
+<div class="paragraph">
+<p>Eventually a word of warning before closing this chapter. You may expect to get a SOAP client injected at this injection point
+as well:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">    @Inject
+    FruitWebService clientService;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is wrong. If your CDI container contains an implementation of <code>FruitWebService</code> then such an instance will be injected. If not, then CDI will complain about not suitable beans. Injection of an implementation can happen because Quarkus-CXF automatically adds CDI scope <code>@Dependent</code> on every class annotated
+with <code>@WebService</code>, thus turing every webservice it encounters automatically into a CDI bean.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="basic-auth"><a class="anchor" href="#basic-auth"></a>Basic Auth</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Basic auth for clients is supported by default. Just add the following properties to your <code>application.properties</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.cxf.client."my-fruitservice-client".username=user
+quarkus.cxf.client."my-fruitservice-client".password=password</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="async-support"><a class="anchor" href="#async-support"></a>Asynchronous Client HTTP Transport</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, the CXF client uses <code>HttpURLConnection</code> to perform HTTP requests.  In order to have non-blocking (asynchronous) invocations you can add the  <code>cxf-rt-transports-http-hc</code> dependency to your project.</p>
+</div>
+<div class="paragraph">
+<p>Once the dependency is available in the classpath, CXF will use <code>HttpAsyncClient</code> for asynchronous calls and will continue using <code>HttpURLConnection</code> for synchronous calls.</p>
+</div>
+<div class="paragraph">
+<p>You can see more details about the CXF asynchronous client and how to tune it further at <a href="https://cxf.apache.org/docs/asynchronous-client-http-transport.html">this link</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

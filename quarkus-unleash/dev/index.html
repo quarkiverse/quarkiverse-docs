@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quarkus - Unleash :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-unleash/dev/index.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-unleash" data-version="dev">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus Unleash</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus Unleash</span>
+    <span class="version">dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-cxf/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-cxf/0.9/index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-github-app/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-logging-splunk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-rabbitmq-client/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus Unleash</a></li>
+    <li><a href="index.html">Introduction</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-unleash/edit/master/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Quarkus - Unleash</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://unleash.github.io/">Unleash</a> is a feature toggle system, that gives you a great overview of all feature toggles across all your applications and services.
+Quarkus Unleash extension is client for Unleash.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to use this extension, you need to add the <code>quarkiverse-unleash</code> extension first.
+In your <code>pom.xml</code> file, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.quarkiverse.unleash&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-unleash&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assuming you have Unleash running on localhost:4242 you should add the following properties to your application.properties
+and fill in the values for url.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.unleash.url=http://localhost:4242/api
+quarkus.unleash.app-name=my-unleash-app</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you have configured the properties, you can start using an Unleash-client.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ApplicationScoped
+public class TestService {
+
+    @Inject
+    Unleash unleash;
+
+    public boolean isTest() {
+        return unleash.isEnabled("quarkus.unleash.test");
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extension_configuration_reference"><a class="anchor" href="#_extension_configuration_reference"></a>Extension Configuration Reference</h2>
+<div class="sectionbody">
+<div class="paragraph configuration-legend">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+</div>
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<colgroup>
+<col style="width: 80%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-unleash_configuration"></a><a href="#quarkus-unleash_configuration">Configuration property</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.url"></a><code><a href="#quarkus-unleash_quarkus.unleash.url">quarkus.unleash.url</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Unleash URL service endpoint</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">required <span class="icon"><i class="fa fa-exclamation-circle" title="Configuration property is required"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.app-name"></a><code><a href="#quarkus-unleash_quarkus.unleash.app-name">quarkus.unleash.app-name</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Application name</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">required <span class="icon"><i class="fa fa-exclamation-circle" title="Configuration property is required"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.instance-id"></a><code><a href="#quarkus-unleash_quarkus.unleash.instance-id">quarkus.unleash.instance-id</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Instance ID.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.disable-metrics"></a><code><a href="#quarkus-unleash_quarkus.unleash.disable-metrics">quarkus.unleash.disable-metrics</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Disable Unleash metrics</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.token"></a><code><a href="#quarkus-unleash_quarkus.unleash.token">quarkus.unleash.token</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Application Unleash token</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.environment"></a><code><a href="#quarkus-unleash_quarkus.unleash.environment">quarkus.unleash.environment</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Application environment</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.project-name"></a><code><a href="#quarkus-unleash_quarkus.unleash.project-name">quarkus.unleash.project-name</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Project name</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.fetch-toggles-interval"></a><code><a href="#quarkus-unleash_quarkus.unleash.fetch-toggles-interval">quarkus.unleash.fetch-toggles-interval</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Fetch toggles interval</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.send-metrics-interval"></a><code><a href="#quarkus-unleash_quarkus.unleash.send-metrics-interval">quarkus.unleash.send-metrics-interval</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Send metrics interval</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">long</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>60</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.backup-file"></a><code><a href="#quarkus-unleash_quarkus.unleash.backup-file">quarkus.unleash.backup-file</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Backup file</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.synchronous-fetch-on-initialisation"></a><code><a href="#quarkus-unleash_quarkus.unleash.synchronous-fetch-on-initialisation">quarkus.unleash.synchronous-fetch-on-initialisation</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>A synchronous fetch on initialisation</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-unleash_quarkus.unleash.enable-proxy-authentication-by-jvm-properties"></a><code><a href="#quarkus-unleash_quarkus.unleash.enable-proxy-authentication-by-jvm-properties">quarkus.unleash.enable-proxy-authentication-by-jvm-properties</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Enable proxy authentication by JVM properties</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

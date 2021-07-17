@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quarkus RabbitMQ Client :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-rabbitmq-client/0.1.0/index.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-rabbitmq-client" data-version="0.1.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus RabbitMQ Client</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Quarkiverse RabbitMQ Client</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus RabbitMQ Client</span>
+    <span class="version">0.1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-cxf/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-cxf/0.9/index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-github-app/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-logging-splunk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-unleash/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus RabbitMQ Client</a></li>
+    <li><a href="index.html">Quarkiverse RabbitMQ Client</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-rabbitmq-client/edit/master/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Quarkus RabbitMQ Client</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>RabbitMQ is a popular message broker. This Quarkus extension provides a client for RabbitMQ which is configurable using the <code>application.properties</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation"><a class="anchor" href="#_installation"></a>Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you want to use this extension, you need to add the <code>quarkus-rabbitmq-client</code> extension first.
+In your <code>pom.xml</code> file, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.quarkiverse&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-rabbitmq-client&lt;/artifactId&gt;
+    &lt;version&gt;0.1.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usage"><a class="anchor" href="#_usage"></a>Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Assuming you have RabbitMQ running on localhost:5672 you should add the following properties to your <code>application.properties</code> and fill in the values for <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.rabbitmqclient.virtual-host=/
+quarkus.rabbitmqclient.username=&lt;username&gt;
+quarkus.rabbitmqclient.password=&lt;password&gt;
+quarkus.rabbitmqclient.hostname=localhost
+quarkus.rabbitmqclient.port=5672</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once you have configured the properties, you can start using the RabbitMQ client.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ApplicationScoped
+public class MessageService {
+
+    private static final Logger log = LoggerFactory.getLogger(MessageService.class);
+
+    @Inject
+    RabbitMQClient rabbitMQClient;
+
+    private Channel channel;
+
+    public void onApplicationStart(@Observes StartupEvent event) {
+        // on application start prepare the queus and message listener
+        setupQueues();
+        setupReceiving();
+    }
+
+    private void setupQueues() {
+        try {
+            // create a connection
+            Connection connection = rabbitMQClient.connect();
+            // create a channel
+            channel = connection.createChannel();
+            // declare exchanges and queues
+            channel.exchangeDeclare("sample", BuiltinExchangeType.TOPIC, true);
+            channel.queueDeclare("sample.queue", true, false, false, null);
+            channel.queueBind("sample.queue", "test", "#");
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
+
+    private void setupReceiving() {
+        try {
+            // register a consumer for messages
+            channel.basicConsume("sample.queue", true, new DefaultConsumer(channel) {
+                @Override
+                public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                    // just print the received message.
+                    log.info("Received: " + new String(body, StandardCharsets.UTF_8));
+                }
+            });
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
+
+    public void send(String message) {
+        try {
+            // send a message to the exchange
+            channel.basicPublish("test", "#", null, message.getBytes(StandardCharsets.UTF_8));
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You do not need to worry about closing connections as the <code>RabbitMQClient</code> will close them for you on application shutdown.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extension-configuration-reference"><a class="anchor" href="#extension-configuration-reference"></a>Extension Configuration Reference</h2>
+<div class="sectionbody">
+<div class="paragraph configuration-legend">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> Configuration property fixed at build time - All other configuration properties are overridable at runtime</p>
+</div>
+<table class="tableblock frame-all grid-all stretch configuration-reference searchable">
+<colgroup>
+<col style="width: 80%;">
+<col style="width: 10%;">
+<col style="width: 10%;">
+</colgroup>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-rabbitmqclient_configuration"></a><a href="#quarkus-rabbitmqclient_configuration">Configuration property</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="icon"><i class="fa fa-lock" title="Fixed at build time"></i></span> <a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.health-enabled"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.health-enabled">quarkus.rabbitmqclient.health-enabled</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Enables health check</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.uri"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.uri">quarkus.rabbitmqclient.uri</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>URI for connecting, formatted as amqp://userName:password@hostName:portNumber/virtualHost</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.username"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.username">quarkus.rabbitmqclient.username</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Username for authentication</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>guest</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.password"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.password">quarkus.rabbitmqclient.password</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Password for authentication</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>guest</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.hostname"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.hostname">quarkus.rabbitmqclient.hostname</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Hostname for connecting</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>localhost</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.virtual-host"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.virtual-host">quarkus.rabbitmqclient.virtual-host</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Virtual host</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>/</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.port"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.port">quarkus.rabbitmqclient.port</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Port number for connecting</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>-1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.connection-timeout"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.connection-timeout">quarkus.rabbitmqclient.connection-timeout</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Connection timeout in milliseconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>60000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.requested-heartbeat"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.requested-heartbeat">quarkus.rabbitmqclient.requested-heartbeat</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Heartbeat interval in seconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>60</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.handshake-timeout"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.handshake-timeout">quarkus.rabbitmqclient.handshake-timeout</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Handshake timeout in milliseconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.shutdown-timeout"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.shutdown-timeout">quarkus.rabbitmqclient.shutdown-timeout</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Shutdown timeout in milliseconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.requested-channel-max"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.requested-channel-max">quarkus.rabbitmqclient.requested-channel-max</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Maximum number of channels per connection</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>2047</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.requested-frame-max"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.requested-frame-max">quarkus.rabbitmqclient.requested-frame-max</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Maximum frame size</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.network-recovery-interval"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.network-recovery-interval">quarkus.rabbitmqclient.network-recovery-interval</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Network recovery interval in milliseconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>5000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.channel-rpc-timeout"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.channel-rpc-timeout">quarkus.rabbitmqclient.channel-rpc-timeout</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Channel RPC timeout in milliseconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>600000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.channel-rpc-response-type-check"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.channel-rpc-response-type-check">quarkus.rabbitmqclient.channel-rpc-response-type-check</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Validate channel RPC response type</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.connection-recovery"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.connection-recovery">quarkus.rabbitmqclient.connection-recovery</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Recover connection on failure</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.topology-recovery"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.topology-recovery">quarkus.rabbitmqclient.topology-recovery</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Recover topology on failure</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.properties-property-name"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.properties-property-name">quarkus.rabbitmqclient.properties</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Client properties</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>Map&lt;String,String&gt;</code></p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.addresses-broker-addresses-for-creating-connections"></a><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.addresses-broker-addresses-for-creating-connections">Broker addresses for creating connections</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.addresses.-broker-name-.hostname"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.addresses.-broker-name-.hostname">quarkus.rabbitmqclient.addresses."broker-name".hostname</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Hostname for connecting</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">required <span class="icon"><i class="fa fa-exclamation-circle" title="Configuration property is required"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.addresses.-broker-name-.port"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.addresses.-broker-name-.port">quarkus.rabbitmqclient.addresses."broker-name".port</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Port number for connecting</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>0</code></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls-tls-configuration"></a><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls-tls-configuration">Tls configuration</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.enabled"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.enabled">quarkus.rabbitmqclient.tls.enabled</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Enables TLS</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.algorithm"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.algorithm">quarkus.rabbitmqclient.tls.algorithm</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>TLS Algorithm to use</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>TLSv1.2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-file"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-file">quarkus.rabbitmqclient.tls.trust-store-file</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Trust store file</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-type"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-type">quarkus.rabbitmqclient.tls.trust-store-type</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Trust store type</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>JKS</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-algorithm"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-algorithm">quarkus.rabbitmqclient.tls.trust-store-algorithm</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Trust store algorithm</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>SunX509</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-password"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.trust-store-password">quarkus.rabbitmqclient.tls.trust-store-password</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Trust store password</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-file"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-file">quarkus.rabbitmqclient.tls.key-store-file</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Key store file</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-password"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-password">quarkus.rabbitmqclient.tls.key-store-password</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Key store password</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-type"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-type">quarkus.rabbitmqclient.tls.key-store-type</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Key store type</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>PKCS12</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-algorithm"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.key-store-algorithm">quarkus.rabbitmqclient.tls.key-store-algorithm</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Key store algorithm</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>SunX509</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.validate-server-certificate"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.validate-server-certificate">quarkus.rabbitmqclient.tls.validate-server-certificate</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Validate server certificate</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.verify-hostname"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.tls.verify-hostname">quarkus.rabbitmqclient.tls.verify-hostname</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Verify hostname</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>true</code></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock"><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio-non-blocking-io-configuration"></a><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio-non-blocking-io-configuration">Non blocking IO configuration</a></p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Type</p></th>
+<th class="tableblock halign-left valign-middle"><p class="tableblock">Default</p></th>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.enabled"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.enabled">quarkus.rabbitmqclient.nio.enabled</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Enables non blocking IO</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">boolean</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.read-byte-buffer-size"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.read-byte-buffer-size">quarkus.rabbitmqclient.nio.read-byte-buffer-size</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Read buffer size in bytes</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>32768</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.write-byte-buffer-size"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.write-byte-buffer-size">quarkus.rabbitmqclient.nio.write-byte-buffer-size</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Write buffer size in bytes</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>32768</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.threads"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.threads">quarkus.rabbitmqclient.nio.threads</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Number of non blocking IO threads</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.write-enqueuing-timeout"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.write-enqueuing-timeout">quarkus.rabbitmqclient.nio.write-enqueuing-timeout</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Write enqueuing timeout in milliseconds</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10000</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.write-queue-capacity"></a><code><a href="#quarkus-rabbitmqclient_quarkus.rabbitmqclient.nio.write-queue-capacity">quarkus.rabbitmqclient.nio.write-queue-capacity</a></code></p>
+</div>
+<div class="openblock description">
+<div class="content">
+<div class="paragraph">
+<p>Write queue capacity.</p>
+</div>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">int</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><code>10000</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

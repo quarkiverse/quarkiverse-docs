@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Testing :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-github-app/dev/testing.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-github-app" data-version="dev">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus GitHub App</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="register-github-app.html">Register a GitHub App</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="create-github-app.html">Create a GitHub App</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="replay-ui.html">Replay UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="developer-reference.html">Developer Reference</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="push-to-production.html">Push to Production</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus GitHub App</span>
+    <span class="version">dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-cxf/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-cxf/0.9/index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-logging-splunk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-rabbitmq-client/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-unleash/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus GitHub App</a></li>
+    <li><a href="testing.html">Testing</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-github-app/edit/main/docs/modules/ROOT/pages/testing.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Testing</h1>
+<div class="sect1">
+<h2 id="manual-vs-automated"><a class="anchor" href="#manual-vs-automated"></a>Manual testing vs. automated testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The easiest way to start testing your GitHub application is probably
+to create a playground project on GitHub and to run the application locally through Smee.io,
+as explained in <a href="register-github-app.html" class="page">Register a GitHub App</a>.</p>
+</div>
+<div class="paragraph">
+<p>This will let you play around on your playground repository,
+manually triggering events (by opening issues, pull requests, etc.),
+then check in the application logs that these events were consumed by the application.</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s enough to get started, but once you start using the application on real repositories,
+you will want to make sure that changes to your code won&#8217;t break existing features.
+Doing that manually on every change will get exhausting very quickly.</p>
+</div>
+<div class="paragraph">
+<p>To automate tests, you will of course <a href="https://quarkus.io/guides/getting-started-testing">rely on JUnit as with any Quarkus application</a>,
+but there is an additional challenge: the application needs a GitHub repository to work on,
+and needs to be fed GitHub events to react to.</p>
+</div>
+<div class="paragraph">
+<p>Fortunately, the GitHub App extension provides tools to help you simulate events and mock a GitHub repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_the_testing_dependency"><a class="anchor" href="#_add_the_testing_dependency"></a>Add the <code>testing</code> dependency</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add the following dependency to your <code>deployment</code> module:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.quarkiverse.githubapp&lt;/groupId&gt;
+    &lt;artifactId&gt;quarkus-github-app-testing&lt;/artifactId&gt;
+    &lt;version&gt;1.1.3&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_the_application_for_tests"><a class="anchor" href="#_configure_the_application_for_tests"></a>Configure the application for tests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add a fake application ID and private key to your <code>application.properties</code>, just for tests:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">%test.quarkus.github-app.app-id=0
+%test.quarkus.github-app.private-key=-----BEGIN RSA PRIVATE KEY-----\
+MIIEogIBAAKCAQEA30YvyuZAd+kGDT0nm/XAa93CqsDvC/iYOc4KsKsfBQs1MWjH\
+royuVDfQj2fJvueFnOgZApM3viaCz188D/j3tUMNByIKOfMLiEm/R1tqe7Q6xRRn\
+uwpfT+wv+/x4cNvPxTscwo43LVR9Pno71UfZZywnYN03GS71ttNCiiBKXwCSnHez\
+/t79iAmMnym7ViNsKzA0aS5EwAw9A3GeTnxpRef0y0vDNE2aXBNCe+f1ZnFq1Fhe\
+PJIlKs/qlM136A2co+WRaPghacZJMuwQr1vajuMSBjMEroIPOfSG3x3Oitvnukjp\
+EwuhXjmZeaLc+60rYaMRwf+bje8KmaAVOMWkHQIDAQABAoIBAA+d8SnYARpiCjJS\
+3Lpj7hmdYUhgRlgoAz3H06eX0IuhxQ63rX/gBzGM1eGx+MKJnybidR1g/r0mJHAs\
+0R6s42aiUf71upFjFqNpxR9QnZoZeSLf0oGasB/+/Tw65JHATkAVamWRXPqmtjvw\
+gM7iP6qfxAFad8gjKLyo+jZ/G7SZTCMwnp+sRynirNpycxaAn/xK6Pe43+nyQVWT\
+E0J8bvCzrFD47CM5zZaBQlLWTMjY4Rr3U6BMTGwQWJzGkeGn+2JsHVUch0k7+NRa\
+e3FKjT+57dZqQTnGPVSpBFWEXVO9KLEuLBLyRx0348TZBHzIM9IigN4QS2AaWTJw\
+1kp3VWECgYEA/3P/nsL+RL/yqYvENZ7XqEkXRNH6YHOe8h/lFoYHStCl9y0T8O+z\
+ooJq9hEq7QcYs2bHvBWj8B9he7+bZ5ZOMAM6oIgrgB5FzSvL7JzXhEdONxe/j2TI\
+GbQuC+NxdJtx4Y6yF9Lrb1UyKX+HzR4de+v6b5hER7x8x4gQn1sCYmsCgYEA38CN\
+bTtE3RKY98m33a1Cd6hNXHSyy5GOK5/XGDn0XoGfFe5YJnnh2lia2V4xqUH9d1Mu\
+bB0bEUhfbac5SX5SIW+NBVxzehqfMkrZj/rzN8Wd7TrYAHSldSMhkPTuwuuzfnHL\
+sJLe2gyoqq+sooeE7eCH2fpPIN0wg5U+jc60hZcCgYBHtmrGSPtUlYYr7p6wZt0n\
+0w0DNudQ+GRgmG+ZeRrG9/f/gdodQ01si6w3U+53CAz5IBtmQ7T4Dfcx5EJePCXK\
++L0Wn+OGXfk+ddMTo5wk+FeOw831FVfPT3O1xq3tDE5WAdchNQb/BC3G1JRtEs04\
+IrD1bwuMD+//m8T+12+97QKBgDko0XhEGdV3+MfkKiphJoe24Pxre3lxl6YhUSuJ\
+Mpop9t/9YVuC62WCGRzKaVlZ2ExxXXyU+uMxX999Rq81q/mKq7Xg5kcdIeoRIP8d\
+FqD6xNtjmuaS5enErcCAMbZtzA7TNzvGaVO+xB/GfQ2QHS8/mrTesvQsTUZwC+ji\
+E0/FAoGATJvuAfgy9uiKR7za7MigYVacE0u4aD1sF7v6D4AFqBOGquPQQhePSdz9\
+G/UUwySoo+AQ+rd2EPhyexjqXBhRGe+EDGFVFivaQzTT8/5bt/VddbTcw2IpmXYj\
+LW6V8BbcP5MRhd2JQSRh16nWwSQJ2BdpUZFwayEEQ6UcrMfqvA0=\
+-----END RSA PRIVATE KEY-----</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_event_payloads_to_the_test_resources"><a class="anchor" href="#_add_event_payloads_to_the_test_resources"></a>Add event payloads to the test resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you <a href="#manual-vs-automated">tested your application manually</a>,
+GitHub sent events (HTTP requests) to your application.
+Those events can be inspected using the <a href="replay-ui.html" class="page">replay UI</a> at <a href="http://localhost:8080/replay/" class="bare">http://localhost:8080/replay/</a>.</p>
+</div>
+<div class="paragraph">
+<p>In order to simulate events in automated tests,
+you need to copy the payload of those events to resource files.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s continue with the example from <a href="create-github-app.html" class="page">Create a GitHub App</a>:
+open an issue in your playground repository,
+go to the replay UI to copy the event payload,
+then put that payload in a file in your project: <code>src/test/resources/issue-opened.json</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_test_class"><a class="anchor" href="#_create_a_test_class"></a>Create a test class</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Add the following class to <code>src/test/java</code>, in a package of your choosing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@QuarkusTest
+@GitHubAppTest
+class CreateCommentTest {
+    @Test
+    void testIssueOpened() {
+        GitHubAppTesting.when() <i class="conum" data-value="1"></i><b>(1)</b>
+                .payloadFromClasspath("/issue-opened.json") <i class="conum" data-value="2"></i><b>(2)</b>
+                .event(GHEvent.ISSUES) <i class="conum" data-value="3"></i><b>(3)</b>
+                .then().github(mocks -&gt; { <i class="conum" data-value="4"></i><b>(4)</b>
+                    Mockito.verify(mocks.issue(750705278)) <i class="conum" data-value="5"></i><b>(5)</b>
+                            .comment("Hello from my GitHub App"); <i class="conum" data-value="6"></i><b>(6)</b>
+                });
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use <code>GitHubAppTesting.when()</code> to start simulating an event.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Define the payload of the simulated event by pointing to a file in the classpath.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Define the type of the simulated event.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Use <code>.then().github(mocks &#8594; &#8230;&#8203;)</code> to perform assertions on GitHub objects involved in the event handling.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The given <code>mocks</code> object gives access to mocks of GitHub objects, indexed by their identifier.
+See the payload of your event for the identifiers of relevant objects (issue, repository, &#8230;&#8203;).
+You can use <code>.issue(long)</code>, <code>.pullRequest(long)</code>, or even <code>.ghObject(Class&lt;? extends GHObject&gt;, long)</code>.
+See the <code>GitHubMockContext</code> interface for a detailed list of methods.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Assertions are performed as usual with Mockito.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_run_your_tests"><a class="anchor" href="#_run_your_tests"></a>Run your tests</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just run <code>./mvnw test</code> from the commandline.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mockito_features"><a class="anchor" href="#_mockito_features"></a>Mockito features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use most Mockito features on the GitHub object mocks;
+that includes defining their behavior before the event is simulated:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@QuarkusTest
+@GitHubAppTest
+class CreateCommentTest {
+    @Test
+    void testIssueOpened() {
+        GitHubAppTesting.given() <i class="conum" data-value="1"></i><b>(1)</b>
+                .github(mocks -&gt; { <i class="conum" data-value="2"></i><b>(2)</b>
+                    Mockito.doThrow(new RuntimeException()) <i class="conum" data-value="3"></i><b>(3)</b>
+                            .when(mocks.issue(750705278))
+                            .comment(Mockito.any());
+                })
+                .when().payloadFromClasspath("/issue-opened.json")
+                .event(GHEvent.ISSUES)
+                .then().github(mocks -&gt; {
+                    Mockito.verify(mocks.issue(750705278))
+                            .comment("Hello from my GitHub App");
+                });
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use given().github(&#8230;&#8203;) to configure mocks.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The given <code>mocks</code> object gives access to mocks of GitHub objects, indexed by their identifier,
+just like in <code>.then().github(&#8230;&#8203;)</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Here we&#8217;re configuring the mock to throw an exception when the application tries to comment on the issue.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_limitations"><a class="anchor" href="#_limitations"></a>Limitations</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The testing tools can be used exclusively with Mockito.</p>
+</li>
+<li>
+<p>The testing tools cannot be used to test an application running in native mode.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Register a GitHub App :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-github-app/dev/register-github-app.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-github-app" data-version="dev">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus GitHub App</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Introduction</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="register-github-app.html">Register a GitHub App</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="create-github-app.html">Create a GitHub App</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="replay-ui.html">Replay UI</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="developer-reference.html">Developer Reference</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="push-to-production.html">Push to Production</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus GitHub App</span>
+    <span class="version">dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-cxf/dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-cxf/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-cxf/0.9/index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-logging-splunk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-rabbitmq-client/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-unleash/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus GitHub App</a></li>
+    <li><a href="register-github-app.html">Register a GitHub App</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-github-app/edit/main/docs/modules/ROOT/pages/register-github-app.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Register a GitHub App</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first step when working on a new GitHub App is to register it on GitHub.</p>
+</div>
+<div class="paragraph">
+<p>That is one of our main differences with Probot:
+we don&#8217;t perform the magic to register your application when initializing it.</p>
+</div>
+<div class="paragraph">
+<p>For now, we think it is better that you understand what you are doing
+when registering your application,
+especially since you will need to do it again when pushing your app to production.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We might revisit this decision at a later stage depending on your feedback.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_1_create_a_playground_project"><a class="anchor" href="#_step_1_create_a_playground_project"></a>Step 1 - Create a playground project</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/new">Create a test repository</a> that will serve as a playground for experimenting.</p>
+</div>
+<div class="paragraph">
+<p>We will install our GitHub App in this repository.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_2_register_the_application"><a class="anchor" href="#_step_2_register_the_application"></a>Step 2 - Register the application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To register a new application, go to <a href="https://github.com/settings/apps">GitHub Apps</a> and click <code>New GitHub App</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can access this page by clicking on your profile picture at the top and then
+<code>Settings</code> &gt; <code>Developer Settings</code> &gt; <code>GitHub Apps</code> &gt; <code>New GitHub App</code>.</p>
+</div>
+<div class="paragraph">
+<p>Fill in the following information.</p>
+</div>
+<div class="sect2">
+<h3 id="_application_name"><a class="anchor" href="#_application_name"></a>Application name</h3>
+<div class="paragraph">
+<p>When you are going to push your app to production, you will register a new GitHub App.</p>
+</div>
+<div class="paragraph">
+<p>So you might want to make it clear in the name that this app is for development/test.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_homepage_url"><a class="anchor" href="#_homepage_url"></a>Homepage URL</h3>
+<div class="paragraph">
+<p>The homepage URL could be, for instance, the URL of your app&#8217;s repository.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webhook_url"><a class="anchor" href="#_webhook_url"></a>Webhook URL</h3>
+<div class="paragraph">
+<p>There is a good chance your development box is not directly accessible from the Internet.</p>
+</div>
+<div class="paragraph">
+<p>To solve this issue, GitHub provides the Smee.io service which uses Server Side Events to distribute the events to your locally running app.</p>
+</div>
+<div class="paragraph">
+<p>Go to <a href="https://smee.io/" class="bare">https://smee.io/</a> and click on <code>Start a new channel</code>.</p>
+</div>
+<div class="paragraph">
+<p>The URL in the <code>Webhook Proxy URL</code> field at the top will be your webhook URL.
+Keep it around, we will need it later.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For now, you don&#8217;t need to set up a webhook secret:
+secret signature checking is disabled when using Smee.io as it modifies the original payload.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webhook_secret"><a class="anchor" href="#_webhook_secret"></a>Webhook secret</h3>
+<div class="paragraph">
+<p>When running in dev mode, we don&#8217;t enforce signature checking
+(one big reason for this is that Smee.io doesn&#8217;t pass the payloads as is).</p>
+</div>
+<div class="paragraph">
+<p>However it is good practice to define a webhook secret as it is enforced in production mode.</p>
+</div>
+<div class="paragraph">
+<p>To generate a webhook secret, you can use the method recommended by GitHub:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">ruby -rsecurerandom -e 'puts SecureRandom.hex(20)'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also use <code>pwgen</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">pwgen -N 1 -s 40</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This webhook secret will be required later so keep it around.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_permissions"><a class="anchor" href="#_permissions"></a>Permissions</h3>
+<div class="paragraph">
+<p>Depending on what your application will do, you will need to set up the appropriate permissions.</p>
+</div>
+<div class="paragraph">
+<p>Just start with enabling the Issues and Pull requests <code>Read &amp; write</code> Repository permissions.
+That is a good starting point to experiment.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can add more permissions later but each installation of your GitHub App will need to validate the added permissions.</p>
+</div>
+<div class="paragraph">
+<p>That is not really a problem when developing your app so don&#8217;t overthink it.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The GitHub documentation contains <a href="https://docs.github.com/en/free-pro-team@latest/rest/reference/permissions-required-for-github-apps">a good reference of the permissions required by each REST API call</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subscribe_to_events"><a class="anchor" href="#_subscribe_to_events"></a>Subscribe to events</h3>
+<div class="paragraph">
+<p>If you don&#8217;t subscribe to any event, your webhook URL will never be called.</p>
+</div>
+<div class="paragraph">
+<p>For experimenting, subscribe to <code>Issues</code>, <code>Issue comment</code> and <code>Pull request</code>.</p>
+</div>
+<div class="paragraph">
+<p>Now, you can click on <code>Create GitHub App</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_3_create_a_private_key"><a class="anchor" href="#_step_3_create_a_private_key"></a>Step 3 - Create a private key</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you have registered your first GitHub App, there is one more thing you need to do:
+generate a private key.</p>
+</div>
+<div class="paragraph">
+<p>Scroll down, and in the <code>Private keys</code> section, click on <code>Generate a private key</code>.</p>
+</div>
+<div class="paragraph">
+<p>You will be asked to download the key, keep it around, we will need it later.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_step_4_install_your_app"><a class="anchor" href="#_step_4_install_your_app"></a>Step 4 - Install your app</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Install the GitHub App in your playground project.</p>
+</div>
+<div class="paragraph">
+<p>This can be done from the <code>Install App</code> tab of the application&#8217;s page (<a href="https://github.com/settings/apps" class="bare">https://github.com/settings/apps</a> then <code>Edit</code> and <code>Install App</code>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thats_it"><a class="anchor" href="#_thats_it"></a>That&#8217;s it</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OK, there is a lot more you can do in there and we will discuss more things in details later,
+but for now, you are done: you have registered your first GitHub App
+and you can start <a href="create-github-app.html" class="page">experimenting with it</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

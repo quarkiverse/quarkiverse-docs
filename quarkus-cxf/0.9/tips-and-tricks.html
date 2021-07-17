@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tips and Tricks :: Quarkiverse Documentation</title>
+    <link rel="canonical" href="https://quarkiverse.github.io/quarkiverse-docs/quarkus-cxf/dev/tips-and-tricks.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site-extra.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="navbar-item">
+        <a href="../..">Quarkiverse</a>
+        <span class="separator">//</span>
+        <a href="https://quarkiverse.github.io/quarkiverse-docs">Docs</a>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Projects</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="../../index/index/index.html">Index</a>
+            <a class="navbar-item" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+            <a class="navbar-item" href="../dev/index.html">Quarkus CXF</a>
+            <a class="navbar-item" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+            <a class="navbar-item" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+            <a class="navbar-item" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+            <a class="navbar-item" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+            <a class="navbar-item" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+            <a class="navbar-item" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+            <a class="navbar-item" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+            <a class="navbar-item" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+            <a class="navbar-item" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Community</div>
+          <div class="navbar-dropdown is-right">
+            <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="https://twitter.com/quarkusio">
+          <span class="icon">
+            <svg aria-hidden="true" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="#57aaee" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="quarkus-cxf" data-version="0.9">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Quarkus CXF</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">CXF Extension for Quarkus</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#native-mode-support">Native Mode Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#contract-code-first">Contract vs Code First</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#sample-code-integration-tests">Sample Code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html#issues-and-support">Issues and Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="config.html">Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="server.html">Creating a SOAP Web Service</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="server.html#wsdl-url">WSDL URL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="server.html#soap-annotations">SOAP Annotations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="client.html">Creating a SOAP Client</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client.html#basic-auth">Basic Auth</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="client.html#async-support">Asynchronous Client HTTP Transport</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="interceptors-and-features.html">Interceptors and Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="ws-security.html">WS-Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ws-security.html#ws-security-service">Web Service Integration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ws-security.html#ws-security-client">Client Integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="properties.html">Properties Reference</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="tips-and-tricks.html">Tips &amp; tricks</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Quarkus CXF</span>
+    <span class="version">0.9</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../index/index/index.html">Index</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index/index/index.html">index</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-hivemq-client/dev/index.html">Quarkus - Hivemq Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-hivemq-client/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../dev/index.html">Quarkus CXF</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dev/index.html">dev</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">0.9</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-freemarker/dev/index.html">Quarkus Freemarker</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-freemarker/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-github-app/dev/index.html">Quarkus GitHub App</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-github-app/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-google-cloud-services/main/index.html">Quarkus Google Cloud Services</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-google-cloud-services/main/index.html">main</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-logging-splunk/dev/index.html">Quarkus Logging Splunk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-logging-splunk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-micrometer-registry/dev/index.html">Quarkus Micrometer Registry extensions</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-micrometer-registry/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../quarkus-micrometer-registry/1.x/index.html">1.x</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mockk/dev/index.html">Quarkus Mockk</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mockk/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-mybatis/dev/index.html">Quarkus MyBatis</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-mybatis/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-rabbitmq-client/0.1.0/index.html">Quarkus RabbitMQ Client</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-rabbitmq-client/0.1.0/index.html">0.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../quarkus-unleash/dev/index.html">Quarkus Unleash</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../quarkus-unleash/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index/index/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Quarkus CXF</a></li>
+    <li><a href="tips-and-tricks.html">Tips &amp; tricks</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">0.9</button>
+  <div class="version-menu">
+    <a class="version" href="../dev/tips-and-tricks.html">dev</a>
+    <a class="version is-current" href="tips-and-tricks.html">0.9</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/quarkiverse/quarkus-cxf/edit/v0.9/docs/modules/ROOT/pages/tips-and-tricks.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Tips and Tricks</h1>
+<div class="sect1">
+<h2 id="_rest_and_soap_endpoints"><a class="anchor" href="#_rest_and_soap_endpoints"></a>REST and SOAP Endpoints</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sometimes a REST endpoint may be needed in the same project where the Quarkus CXF Extension is used.
+The REST endpoint path must be different from the SOAP endpoint path (in order to avoid request
+forwarding conflicts between both protocols).</p>
+</div>
+<div class="paragraph">
+<p>For example, if a WeatherWebService interface is declared in a WSDL, you can
+begin by creating the <code>org.acme.cxf.WeatherWebServiceImpl</code> class as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.cxf;
+
+import ...
+
+@Slf4j
+@WebService(endpointInterface = "org.acme.cxf.WeatherWebService")
+public class WeatherWebServiceImpl implements WeatherWebService {
+
+    @Inject
+    BackEndWeatherService backEndWeatherService;
+
+    private Map&lt;String, DailyTemperature&gt; dailyTempByZipCode = Collections.synchronizedMap(new LinkedHashMap&lt;&gt;());
+
+    public WeatherWebServiceImpl() {
+        this.dailyTempByZipCode.addAll(
+        		this.backEndWeatherService.getDailyForecast(Instant.now()));
+    }
+
+    @Override
+    public DailyTemperature estimationTemperatures(String zipCode) {
+        log.info("Daily estimation temperatures forecast called with '{}' zip code paramter", zipCode);
+        return this.dailyTempByZipCode.get(zipCode);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After that, you would need to specify the root context for your CXF web services, as indicated
+in the <a href="properties.adoc#quarkus.cxf.path">properties documentation</a> to split the REST (with RESTEasy for example)
+and SOAP routes based on their root context paths.</p>
+</div>
+<div class="paragraph">
+<p>CXF&#8217;s SOAP properties:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.cxf.path=/soap
+quarkus.cxf.endpoint."/weather".implementor=org.acme.cxf.WeatherWebServiceImpl</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, imagine the following RESTEasy endpoint:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.acme.reasteasy;
+
+import ...
+
+@Slf4j
+@Path("/healthcheck")
+public class HealthCheckResource {
+
+	@Inject
+    BackEndWeatherService backEndWeatherService;
+
+	@GET
+	public Response doHealthCheck() {
+		if(this.backEndWeatherService.isAvailable()) {
+            return Response.ok().build();
+		} else {
+            return Response.status(Response.Status.SERVICE_UNAVAILABLE);
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can separate your REST endpoint by configuring the REASTEasy path:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">quarkus.resteasy.path=/services</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should now be able to send requests to both your REST and SOAP endpoints deployed within a single project, at:</p>
+</div>
+<div class="paragraph">
+<p><strong>REST request</strong>: <a href="http://localhost:8080/services/healthcheck" class="bare">http://localhost:8080/services/healthcheck</a></p>
+</div>
+<div class="paragraph">
+<p><strong>SOAP request</strong>: <a href="http://localhost:8080/soap/weather" class="bare">http://localhost:8080/soap/weather</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Native-Image-Building"><a class="anchor" href="#Native-Image-Building"></a>Native Image Building</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During a native image build, specifically during the "analysis" phase, your build may throw
+the following exception:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Error: com.oracle.svm.hosted.substitute.DeletedElementException: Unsupported method java.lang.ClassLoader.defineClass(String, byte[], int, int) is reachable
+To diagnose the issue, you can add the option --report-unsupported-elements-at-runtime. The unsupported element is then reported at run time when it is accessed the first time.
+Detailed message:
+Trace:
+	at parsing org.apache.cxf.common.spi.ClassGeneratorClassLoader$TypeHelperClassLoader.access$001(ClassGeneratorClassLoader.java:108)
+Call path from entry point to org.apache.cxf.common.spi.ClassGeneratorClassLoader$TypeHelperClassLoader.access$001(ClassGeneratorClassLoader$TypeHelperClassLoader, String, byte[], int, int):
+	at org.apache.cxf.common.spi.ClassGeneratorClassLoader$TypeHelperClassLoader.access$001(ClassGeneratorClassLoader.java:108)
+	at org.apache.cxf.common.spi.ClassGeneratorClassLoader$TypeHelperClassLoader.lambda$defineClass$0(ClassGeneratorClassLoader.java:148)
+	at org.apache.cxf.common.spi.ClassGeneratorClassLoader$TypeHelperClassLoader$$Lambda$915/0x00000007c1dc1440.apply(Unknown Source)
+	at sun.security.ec.XECParameters$1.get(XECParameters.java:183)
+	at com.oracle.svm.core.jdk.SystemPropertiesSupport.initializeLazyValue(SystemPropertiesSupport.java:190)
+	at com.oracle.svm.core.jdk.SystemPropertiesSupport.getProperty(SystemPropertiesSupport.java:143)
+	at com.oracle.svm.core.jdk.Target_java_lang_System.getProperty(JavaLangSubstitutions.java:338)
+	at com.oracle.svm.jni.JNIJavaCallWrappers.jniInvoke_ARRAY:Ljava_lang_System_2_0002egetProperty_00028Ljava_lang_String_2_00029Ljava_lang_String_2(generated:0)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This exception is thrown if errors should be reported at runtime. The proposed option
+<code>report-unsupported-elements-at-runtime</code> reports usage of unsupported methods and
+fields at run time when they are accessed the first time, instead of as an error
+during image building.</p>
+</div>
+<div class="paragraph">
+<p>The issue can easily be addressed by specifying the following properties in your pom.xml:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  &lt;profiles&gt;
+        &lt;profile&gt;
+            &lt;id&gt;native&lt;/id&gt;
+            &lt;activation&gt;
+                &lt;property&gt;
+                    &lt;name&gt;native&lt;/name&gt;
+                &lt;/property&gt;
+                &lt;activeByDefault&gt;false&lt;/activeByDefault&gt;
+            &lt;/activation&gt;
+            &lt;properties&gt;
+                &lt;quarkus.package.type&gt;native&lt;/quarkus.package.type&gt;
+                &lt;quarkus.native.report-errors-at-runtime&gt;true&lt;/quarkus.native.report-errors-at-runtime&gt;
+            &lt;/properties&gt;
+            ...
+        &lt;/profile&gt;
+ &lt;/profiles&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And finally generate the native image with the <code>native</code> maven profile activation like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">mvn clean package -Pnative -am -Dquarkus.native.container-build=true</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Non-ASCII-Characters"><a class="anchor" href="#Non-ASCII-Characters"></a>Non ASCII Characters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sometimes, after wsdl2java utility as well as cxf-codegen-plugin, the autogenerated Java classes may not be
+fully compatible with GraalVM due to non ASCII characters getting included in the code.  Similar exceptions to
+the below may appear during native image builds.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">[quarkus-dalkia-ticket-loader-1.0.0-SNAPSHOT-runner:26]      compile: 161 459,15 ms,  8,54 GB
+[quarkus-dalkia-ticket-loader-1.0.0-SNAPSHOT-runner:26]        image: 158 272,73 ms,  8,43 GB
+[quarkus-dalkia-ticket-loader-1.0.0-SNAPSHOT-runner:26]        write:     205,82 ms,  8,43 GB
+Fatal error:com.oracle.svm.core.util.VMError$HostedError: java.lang.RuntimeException: oops : expected ASCII string! com.oracle.svm.reflect.OperationOrderStatusType_CRÉÉ_f151156b0d42ecdbdfb919501d8a86dda8733012_1456.hashCode
+	at com.oracle.svm.core.util.VMError.shouldNotReachHere(VMError.java:72)
+	at com.oracle.svm.hosted.image.NativeBootImage.write(NativeBootImage.java:169)
+	at com.oracle.svm.hosted.image.NativeBootImageViaCC.write(NativeBootImageViaCC.java:404)
+	at com.oracle.svm.hosted.NativeImageGenerator.doRun(NativeImageGenerator.java:685)
+	at com.oracle.svm.hosted.NativeImageGenerator.lambda$run$0(NativeImageGenerator.java:476)
+	at java.base/java.util.concurrent.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1407)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+Caused by: java.lang.RuntimeException: oops : expected ASCII string! com.oracle.svm.reflect.OperationOrderStatusType_CRÉÉ_f151156b0d42ecdbdfb919501d8a86dda8733012_1456.hashCode
+	at com.oracle.objectfile.elf.dwarf.DwarfSectionImpl.putAsciiStringBytes(DwarfSectionImpl.java:246)
+	at com.oracle.objectfile.elf.dwarf.DwarfSectionImpl.putAsciiStringBytes(DwarfSectionImpl.java:238)
+	at com.oracle.objectfile.elf.dwarf.DwarfStrSectionImpl.writeContent(DwarfStrSectionImpl.java:75)
+	at com.oracle.objectfile.ObjectFile.debugContext(ObjectFile.java:1823)
+	at com.oracle.objectfile.elf.dwarf.DwarfSectionImpl.getOrDecideContent(DwarfSectionImpl.java:366)
+	at com.oracle.objectfile.elf.ELFUserDefinedSection.getOrDecideContent(ELFUserDefinedSection.java:111)
+	at com.oracle.objectfile.ObjectFile.bake(ObjectFile.java:1608)
+	at com.oracle.objectfile.ObjectFile.write(ObjectFile.java:1268)
+	at com.oracle.svm.hosted.image.NativeBootImage.lambda$write$0(NativeBootImage.java:165)
+	at com.oracle.objectfile.ObjectFile.withDebugContext(ObjectFile.java:1804)
+	at com.oracle.svm.hosted.image.NativeBootImage.write(NativeBootImage.java:164)
+	... 9 more
+Error: Image build request failed with exit status 1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below is an example of auto-generated non ASCII characters in a Java class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@XmlType(name = "OperationOrderStatusType")
+@XmlEnum
+public enum OperationOrderStatusType {
+
+    @XmlEnumValue("Cr\u00e9\u00e9")
+    CRÉÉ("Cr\u00e9\u00e9"),
+    @XmlEnumValue("A communiquer")
+    A_COMMUNIQUER("A communiquer"),
+    @XmlEnumValue("En attente de r\u00e9ponse")
+    EN_ATTENTE_DE_RÉPONSE("En attente de r\u00e9ponse"),
+    @XmlEnumValue("Attribu\u00e9")
+    ATTRIBUÉ("Attribu\u00e9"),
+    @XmlEnumValue("Clotur\u00e9")
+    CLOTURÉ("Clotur\u00e9"),
+    @XmlEnumValue("Annul\u00e9")
+    ANNULÉ("Annul\u00e9");
+    private final String value;
+
+    OperationOrderStatusType(String v) {
+        value = v;
+    }
+
+    public String value() {
+        return value;
+    }
+
+    public static OperationOrderStatusType fromValue(String v) {
+        for (OperationOrderStatusType c: OperationOrderStatusType.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Anything starting with <code>\u</code> will be a problem. Consequently the following refactoring is needed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@XmlType(name = "OperationOrderStatusType")
+@XmlEnum
+public enum OperationOrderStatusType {
+
+    @XmlEnumValue("Créé")
+    CREE("Créé"),
+    @XmlEnumValue("A communiquer")
+    A_COMMUNIQUER("A communiquer"),
+    @XmlEnumValue("En attente de réponse")
+    EN_ATTENTE_DE_REPONSE("En attente de réponse"),
+    @XmlEnumValue("Attribué")
+    ATTRIBUE("Attribué"),
+    @XmlEnumValue("Cloturé")
+    CLOTURE("Cloturé"),
+    @XmlEnumValue("Annulé")
+    ANNULE("Annulé");
+    private final String value;
+
+    OperationOrderStatusType(String v) {
+        value = v;
+    }
+
+    public String value() {
+        return value;
+    }
+
+    public static OperationOrderStatusType fromValue(String v) {
+        for (OperationOrderStatusType c: OperationOrderStatusType.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>Copyright (C) 2020-2021 <a href="https://www.redhat.com">Red Hat</a> and individual contributors to <a href="https://github.com/quarkiverse/quarkiverse-docs">Quarkiverse</a>.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
