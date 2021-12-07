@@ -34,6 +34,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-logging-logback.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-logging-sentry.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-micrometer-registry.git
       branches: [HEAD, 1.x]
       start_path: docs
