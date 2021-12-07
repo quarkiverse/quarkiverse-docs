@@ -34,6 +34,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-logging-logback.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-logging-sentry.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-micrometer-registry.git
       branches: [HEAD, 1.x]
       start_path: docs
@@ -56,6 +59,33 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-tika
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-amazon-alexa
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-neo4j
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jsch
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jgit
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-artemis
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-amazon-services
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-hibernate-search-extras
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-config-extensions
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-vault
       branches: HEAD
       start_path: docs
 ui:
