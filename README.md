@@ -1,4 +1,4 @@
-# quarkiverse-docs
+# Quarkiverse Docs
 
 This repository uses [Antora](https://antora.org/) to generate a documentation website for the Quarkiverse extensions.
 
