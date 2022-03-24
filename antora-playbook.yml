@@ -102,6 +102,9 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-types
       branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-renarde
+      branches: HEAD
       start_path: docs      
 ui:
   bundle:
