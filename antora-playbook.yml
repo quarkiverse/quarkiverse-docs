@@ -106,6 +106,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-renarde
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-helm
+      branches: HEAD
+      start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
