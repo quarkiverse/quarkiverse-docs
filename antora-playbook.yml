@@ -29,7 +29,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cxf.git
-      branches: [HEAD, v0.9]
+      branches: [HEAD, v1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-logging-splunk.git
       branches: HEAD
