@@ -76,6 +76,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jgit
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jgrapht
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-artemis
       branches: HEAD
       start_path: docs
