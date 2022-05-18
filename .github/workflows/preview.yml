@@ -22,8 +22,8 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install Antora
-        run: npm i antora
+      - name: Install Antora and the Antora Lunr Extension
+        run: npm i antora @antora/lunr-extension
 
       - name: Generate Site
         run: npx antora antora-playbook.yml
