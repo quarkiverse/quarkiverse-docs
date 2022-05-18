@@ -131,3 +131,8 @@ ui:
 
 runtime:
   fetch: true
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+

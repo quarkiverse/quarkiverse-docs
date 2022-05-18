@@ -6,10 +6,13 @@
         <span class="separator">//</span>
         <a href="{{or site.url (or siteRootUrl siteRootPath)}}">Docs</a>
       </div>
-      {{#if env.ALGOLIA_API_KEY}}
-      <div class="navbar-item hide-for-print">
-        <input id="search-input" type="text" placeholder="Search docs">
-      </div>
+    </div>
+      {{#if env.SITE_SEARCH_PROVIDER}}
+          <div class="navbar-item search hide-for-print">
+              <div id="search-field" class="field">
+                  <input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
+              </div>
+          </div>
       {{/if}}
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
