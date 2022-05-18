@@ -23,14 +23,6 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <div class="navbar-link">Projects</div>
-          <div class="navbar-dropdown">
-{{#each site.components}}
-            <a class="navbar-item" href="{{{relativize ./latestVersion/url}}}">{{{./title}}}</a>
-{{/each}}
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
           <div class="navbar-link">Community</div>
           <div class="navbar-dropdown is-right">
             <a class="navbar-item" href="https://quarkusio.zulipchat.com">Chat</a>
