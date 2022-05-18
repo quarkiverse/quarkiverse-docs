@@ -23,10 +23,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Generate website
-        uses: kameshsampath/antora-site-action@v0.2.4
+      - name: Install Node.js
+        uses: actions/setup-node@v2
         with:
-          antora_playbook: antora-playbook.yml
+          node-version: '16'
+
+      - name: Install Antora
+        run: npm i antora
+
+      - name: Generate Site
+        run: npx antora antora-playbook.yml
 
       - name: Publish to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
