@@ -13,6 +13,19 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
 
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
       - uses: n1hility/cancel-previous-runs@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -22,11 +35,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install Antora and the required extensions
-        run: npm i antora
+      - name: Install packages
+        run: npm i
 
       - name: Generate Site
-        run: npx antora antora-playbook.yml
+        run: npm run build
 
       - uses: afc163/surge-preview@v1
         id: preview_step
