@@ -8,7 +8,8 @@ This repository uses [Antora](https://antora.org/) to generate a documentation w
 To build the documentation website, clone this repository, make sure you have the [Antora CLI installed](https://docs.antora.org/antora/2.3/install/install-antora/) and run the following command:
 
 ```
-   antora antora-playbook.yml
+   npm install
+   npm run build
 ```
 
 You should see the generated website under `build/site/`.
