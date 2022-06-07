@@ -1,0 +1,17 @@
+{
+  "name": "quarkiverse-docs",
+  "description": "Quarkiverse Documentation Site",
+  "homepage": "https://quarkiverse.github.io/quarkiverse-docs/",
+  "private": true,
+  "scripts": {
+    "build": "antora antora-playbook.yml"
+  },
+  "dependencies": {
+    "antora": "~3.0.1",
+    "asciidoctor-kroki": "~0.15.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quarkiverse/quarkiverse-docs.git"
+  }
+}
