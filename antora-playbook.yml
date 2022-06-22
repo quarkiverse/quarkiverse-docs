@@ -127,6 +127,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-couchbase
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-pooled-jms
+      branches: HEAD
+      start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
