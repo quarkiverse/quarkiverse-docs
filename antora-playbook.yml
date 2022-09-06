@@ -145,7 +145,7 @@ content:
     - url: https://github.com/quarkiverse/quarkus-cert-manager
       branches: HEAD
       start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-zookeeper
+    - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
       start_path: docs
 ui:
