@@ -148,6 +148,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-minio
+      branches: HEAD
+      start_path: docs
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
