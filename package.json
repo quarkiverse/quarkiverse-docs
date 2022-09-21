@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "antora": "~3.0.1",
-    "asciidoctor-kroki": "~0.15.4"
+    "asciidoctor-kroki": "~0.16.0"
   },
   "repository": {
     "type": "git",
