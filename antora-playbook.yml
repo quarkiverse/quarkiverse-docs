@@ -85,6 +85,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-amazon-services
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-azure-services
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-search-extras
       branches: HEAD
       start_path: docs
