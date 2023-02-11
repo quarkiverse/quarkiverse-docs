@@ -110,7 +110,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-renarde
-      branches: [HEAD, v1.x]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-helm
       branches: HEAD
