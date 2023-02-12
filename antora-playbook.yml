@@ -20,7 +20,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mybatis.git
-      branches: HEAD
+      branches: [HEAD, 1.x]
       start_path: mybatis/docs
     - url: https://github.com/quarkiverse/quarkus-unleash.git
       branches: HEAD
