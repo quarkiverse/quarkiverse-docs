@@ -131,7 +131,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-pooled-jms
-      branches: HEAD
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jackson-jq
       branches: HEAD
