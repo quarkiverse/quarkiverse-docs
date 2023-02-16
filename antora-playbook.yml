@@ -80,7 +80,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-artemis
-      branches: HEAD
+      branches: [HEAD, 2.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-amazon-services
       branches: [HEAD, 1.x]
