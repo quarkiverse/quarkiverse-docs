@@ -148,6 +148,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-omnifaces
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-primefaces
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cert-manager
       branches: HEAD
       start_path: docs
