@@ -92,7 +92,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-search-extras
-      branches: HEAD
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-config-extensions
       branches: HEAD
