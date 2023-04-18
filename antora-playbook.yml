@@ -23,7 +23,7 @@ content:
       branches: [HEAD, 1.x]
       start_path: mybatis/docs
     - url: https://github.com/quarkiverse/quarkus-unleash.git
-      branches: HEAD
+      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mockk.git
       branches: HEAD
