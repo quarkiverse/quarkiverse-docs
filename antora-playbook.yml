@@ -199,6 +199,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mockserver
       branches: [HEAD, 0.x]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-zeebe
+      branches: [HEAD, 0.x]
+      start_path: docs      
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
