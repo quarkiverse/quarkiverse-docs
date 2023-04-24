@@ -169,6 +169,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-openfga-client.git
+      branches: HEAD
+      start_path: docs      
     - url: https://github.com/quarkiverse/quarkus-jpastreamer.git
       branches: [HEAD, 1.x]
       start_path: docs
