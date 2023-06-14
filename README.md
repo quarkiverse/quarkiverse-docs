@@ -17,3 +17,8 @@ You should see the generated website under `build/site/`.
 ## CI
 
 This repository is scheduled to build 4 times/day, so don't worry if your documentation changes are not visible immediately once you push to your extension repository. 
+
+## Changing the look and feel 
+
+The UI for the antora website is controlled by the [Quarkiverse antora theme](https://github.com/quarkiverse/antora-ui-quarkiverse) repository. 
+This site will pull in the current theme on every scheduled build. 
