@@ -62,5 +62,7 @@ jobs:
           build_dir: build/site
           # Do not allow Jekyll to build your site
           jekyll: false
+          # Write the given domain name to the CNAME file
+          fqdn: docs.quarkiverse.io
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
