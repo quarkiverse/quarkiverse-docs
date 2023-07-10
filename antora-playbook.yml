@@ -1,6 +1,6 @@
 site:
   title: Quarkiverse Documentation
-  url: https://quarkiverse.github.io/quarkiverse-docs/
+  url: https://docs.quarkiverse.io
   start_page: index::index.adoc
 
 content:
