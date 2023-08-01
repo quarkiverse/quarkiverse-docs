@@ -77,7 +77,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-search-extras
-      branches: [ HEAD, 1.x ]
+      branches: [ HEAD, 1.x, 2.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-types
       branches: HEAD
