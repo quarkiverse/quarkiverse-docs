@@ -202,14 +202,14 @@ content:
     - url: https://github.com/quarkiverse/quarkus-tika
       branches: [ HEAD, 1.x ]
       start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-web-bundler
-      branches: [ HEAD ]
-      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-unleash.git
       branches: [ HEAD, 0.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-vault
       branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-web-bundler
+      branches: [ HEAD ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
