@@ -85,6 +85,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-hivemq-client
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-ironjacamar
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-itext
       branches: HEAD
       start_path: docs
