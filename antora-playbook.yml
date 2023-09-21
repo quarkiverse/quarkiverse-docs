@@ -17,7 +17,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-artemis
-      branches: [ HEAD, 2.x ]
+      branches: [ HEAD, 3.0.x, 2.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-asyncapi.git
       branches: HEAD
