@@ -13,6 +13,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-amazon-services
       branches: [ HEAD, 1.x, 2.4.x ]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-antivirus
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-apistax
       branches: HEAD
       start_path: docs
