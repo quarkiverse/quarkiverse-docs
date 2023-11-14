@@ -130,6 +130,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-kerberos
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-langchain4j
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-logging-json
       branches: HEAD
       start_path: docs
