@@ -68,10 +68,10 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-action.git
-      branches: [ HEAD, 1.x ]
+      branches: [ HEAD ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-app.git
-      branches: [ HEAD, 1.x ]
+      branches: [ HEAD ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-google-cloud-services
       branches: HEAD
