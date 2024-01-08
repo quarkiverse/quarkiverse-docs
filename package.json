@@ -7,7 +7,7 @@
     "build": "antora antora-playbook.yml"
   },
   "dependencies": {
-    "antora": "~3.1.6",
+    "antora": "~3.1.7",
     "asciidoctor-kroki": "~0.18.1"
   },
   "repository": {
