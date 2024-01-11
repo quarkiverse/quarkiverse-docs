@@ -187,6 +187,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-pact.git
       branches: [ HEAD, quarkus-2-support ]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-pdfbox.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-playwright.git
       branches: HEAD
       start_path: docs
