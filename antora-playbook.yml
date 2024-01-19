@@ -7,9 +7,6 @@ content:
   sources: # Keep in alphabetical order by URL
     - url: . # common module containing just the main index
       branches: HEAD
-    - url: https://github.com/kiota-community/kiota-java-extra
-      branches: HEAD
-      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-amazon-alexa
       branches: HEAD
       start_path: docs
