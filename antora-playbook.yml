@@ -169,6 +169,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-neo4j
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-ngrok
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-omnifaces
       branches: HEAD
       start_path: docs
