@@ -55,6 +55,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-discord4j.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-doma.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-embedded-postgresql.git
       branches: HEAD
       start_path: docs
