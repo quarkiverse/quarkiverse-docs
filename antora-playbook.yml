@@ -11,7 +11,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-amazon-services
-      branches: [ HEAD, 1.x, 2.4.x ]
+      branches: [ HEAD, 1.x, 2.4.x, 2.12.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-antivirus
       branches: HEAD
