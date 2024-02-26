@@ -13,7 +13,7 @@ content:
     - url: https://github.com/quarkiverse/quarkus-amazon-services
       branches: [ HEAD, '{1..9}*({0..9})?(.+({0..9})).x' ]
       version: 
-        HEAD: dev # fallback to using the matched refname as the value for other branches
+        main: dev # fallback to using the matched refname as the value for other branches
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-antivirus
       branches: HEAD
