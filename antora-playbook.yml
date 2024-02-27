@@ -186,6 +186,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-omnifaces
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-openapi-generator.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-openfga-client.git
       branches: HEAD
       start_path: docs
