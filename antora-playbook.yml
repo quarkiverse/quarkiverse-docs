@@ -21,6 +21,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-apistax
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-arangodb-client
+      branches: HEAD
+      start_path: docs      
     - url: https://github.com/quarkiverse/quarkus-artemis
       branches: [ HEAD, 3.0.x, 2.x ]
       start_path: docs
