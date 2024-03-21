@@ -214,7 +214,7 @@ content:
       branches: [ HEAD, 1.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-pooled-jms
-      branches: [ HEAD, 1.x ]
+      branches: [ HEAD, 2.3.x, 2.1.x, 1.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-prettytime
       branches: HEAD
