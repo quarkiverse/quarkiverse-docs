@@ -168,6 +168,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-micrometer-registry.git
       branches: [ HEAD, 1.x ]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-opentelemetry-exporter.git
+      branches: [ HEAD, 1.x ]
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-minio
       branches: [ HEAD, 2.9.x ]
       start_path: docs
