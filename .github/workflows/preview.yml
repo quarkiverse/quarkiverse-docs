@@ -25,6 +25,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
 
       - name: Install Node.js
@@ -50,7 +51,7 @@ jobs:
         run: npx surge ./ --domain https://quarkiverse-docs-pr-${{ steps.pr.outputs.id }}-preview.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
       - name: Update PR status comment on success
-        uses: actions-cool/maintain-one-comment@v3.0.0
+        uses: actions-cool/maintain-one-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
@@ -61,7 +62,7 @@ jobs:
 
       - name: Update PR status comment on failure
         if: ${{ failure() }}
-        uses: actions-cool/maintain-one-comment@v3.0.0
+        uses: actions-cool/maintain-one-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |

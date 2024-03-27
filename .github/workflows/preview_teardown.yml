@@ -7,13 +7,13 @@ on:
 
 jobs:
   preview:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Teardown surge preview
         id: deploy
         run: npx surge teardown https://quarkiverse-docs-pr-${{ github.event.number }}-preview.surge.sh --token ${{ secrets.SURGE_TOKEN }} || true
       - name: Update PR status comment
-        uses: actions-cool/maintain-one-comment@v3.0.0
+        uses: actions-cool/maintain-one-comment@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
