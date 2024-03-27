@@ -34,8 +34,8 @@ jobs:
       - name: Store PR id as variable
         id: pr
         run: |
-          echo "id=$(<pr/pr-id.txt)" >> $GITHUB_OUTPUT
-          rm -f pr
+          echo "id=$(<pr-id.txt)" >> $GITHUB_OUTPUT
+          rm -f pr-id.txt
 
       - name: Publishing to surge for preview
         id: deploy
