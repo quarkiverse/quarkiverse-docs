@@ -24,11 +24,18 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           run-id: ${{ github.event.workflow_run.id }}
 
+      - name: Download PR ID Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pr-id
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
       - name: Store PR id as variable
         id: pr
         run: |
-          echo "id=$(<pr-id.txt)" >> $GITHUB_OUTPUT
-          rm -f pr-id.txt
+          echo "id=$(<pr/pr-id.txt)" >> $GITHUB_OUTPUT
+          rm -f pr
 
       - name: Publishing to surge for preview
         id: deploy

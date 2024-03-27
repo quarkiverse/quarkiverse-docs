@@ -36,9 +36,18 @@ jobs:
         run: npm run build
 
       - name: Store PR id
-        run: echo ${{ github.event.number }} > pr-id.txt
+        run: |
+          mkdir pr
+          echo ${{ github.event.number }} > ./pr/pr-id.txt
 
-      - name: Publishing directory for PR preview
+      - name: Upload PR id as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-id
+          path: pr
+          retention-days: 1
+
+      - name: Upload site as artifact
         uses: actions/upload-artifact@v4
         with:
           name: site
