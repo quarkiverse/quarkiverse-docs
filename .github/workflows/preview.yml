@@ -25,6 +25,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
+          run-id: ${{ github.event.workflow_run.id }}
 
       - name: Install Node.js
         uses: actions/setup-node@v4
