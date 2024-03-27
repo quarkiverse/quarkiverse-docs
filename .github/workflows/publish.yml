@@ -36,6 +36,7 @@ jobs:
         run: npm run build
 
       - name: Store PR id
+        if: github.event_name == 'pull_request'
         run: |
           mkdir pr
           echo ${{ github.event.number }} > ./pr/pr-id.txt
