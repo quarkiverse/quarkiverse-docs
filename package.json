@@ -1,7 +1,7 @@
 {
   "name": "quarkiverse-docs",
   "description": "Quarkiverse Documentation Site",
-  "homepage": "https://quarkiverse.github.io/quarkiverse-docs/",
+  "homepage": "https://docs.quarkiverse.io",
   "private": true,
   "scripts": {
     "build": "antora antora-playbook.yml"
