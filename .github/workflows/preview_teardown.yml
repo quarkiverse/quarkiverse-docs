@@ -9,12 +9,15 @@ jobs:
   preview:
     runs-on: ubuntu-20.04
     steps:
-      - uses: afc163/surge-preview@v1
-        id: preview_step
+      - name: Teardown surge preview
+        id: deploy
+        run: npx surge teardown https://quarkiverse-docs-pr-${{ github.event.number }}-preview.surge.sh --token ${{ secrets.SURGE_TOKEN }} || true
+      - name: Update PR status comment
+        uses: actions-cool/maintain-one-comment@v3.0.0
         with:
-          surge_token: ${{ secrets.SURGE_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          teardown: 'true'
-          failOnError: 'false'
-          build: |
-            echo Undeploying from surge.sh
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            🙈 The PR is closed and the preview is expired.
+            <!-- Sticky Pull Request Comment -->
+          body-include: '<!-- Sticky Pull Request Comment -->'
+          number: ${{ github.event.number }}
