@@ -83,8 +83,9 @@ jobs:
 
       - name: Publishing to surge for preview
         id: deploy
-        run: npx surge ./ --domain https://quarkiverse-docs-pr-${{ steps.pr.outputs.id }}-preview.surge.sh --token ${{ secrets.SURGE_TOKEN }}
-
+        run: npx surge ./ --domain https://quarkiverse-docs-pr-${{ steps.pr.outputs.id }}-preview.surge.sh --token $SURGE_TOKEN
+        env:
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
       - name: Update PR status comment on success
         uses: actions-cool/maintain-one-comment@v3
         with:
