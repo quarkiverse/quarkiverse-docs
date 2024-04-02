@@ -18,6 +18,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-antivirus
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-antora.git
+      branches: [ HEAD ]
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-apistax
       branches: HEAD
       start_path: docs
