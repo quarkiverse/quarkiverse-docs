@@ -40,6 +40,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-bucket4j
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-business-score
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cert-manager
       branches: HEAD
       start_path: docs
