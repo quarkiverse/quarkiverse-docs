@@ -28,8 +28,8 @@ content:
       branches: HEAD
       start_path: docs      
     - url: https://github.com/quarkiverse/quarkus-artemis
-      branches: [ HEAD, 3.1.x, 3.0.x ]
-      tags: [ 2.1.4 ]
+      branches: [ HEAD, 3.2.x ]
+      tags: [ 2.1.4, 3.0.7, 3.1.6 ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-asyncapi.git
       branches: HEAD
