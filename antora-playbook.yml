@@ -70,6 +70,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-doma.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-easy-retrofit
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-embedded-postgresql.git
       branches: HEAD
       start_path: docs
@@ -295,9 +298,6 @@ content:
       branches: [ HEAD, 0.x ]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
-      branches: HEAD
-      start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-easy-retrofit
       branches: HEAD
       start_path: docs
 ui:
