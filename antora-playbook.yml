@@ -2,7 +2,6 @@ site:
   title: Quarkiverse Documentation
   url: https://docs.quarkiverse.io
   start_page: index::index.adoc
-
 content:
   sources: # Keep in alphabetical order by URL
     - url: . # common module containing just the main index
@@ -11,30 +10,33 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-amazon-services
-      branches: [ HEAD, '{1..9}*({0..9})?(.+({0..9})).x' ]
-      version: 
+      branches: [HEAD, '{1..9}*({0..9})?(.+({0..9})).x']
+      version:
         main: dev # fallback to using the matched refname as the value for other branches
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-antivirus
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-antora.git
-      branches: [ HEAD ]
+      branches: [HEAD]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-apistax
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-arangodb-client
       branches: HEAD
-      start_path: docs      
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-artemis
-      branches: [ HEAD, 3.2.x ]
-      tags: [ 2.1.4, 3.0.7, 3.1.6 ]
+      branches: [HEAD, 3.2.x]
+      tags: [2.1.4, 3.0.7, 3.1.6]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-asyncapi.git
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-azure-services
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-backstage
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-bucket4j
@@ -56,7 +58,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cxf.git
-      branches: [ HEAD, 3.8, 2.2, 1.5 ]
+      branches: [HEAD, 3.8, 2.2, 1.5]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-dapr
       branches: HEAD
@@ -86,10 +88,10 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-action.git
-      branches: [ HEAD ]
+      branches: [HEAD]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-app.git
-      branches: [ HEAD ]
+      branches: [HEAD]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-google-cloud-services
       branches: HEAD
@@ -101,7 +103,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-search-extras
-      branches: [ HEAD, 1.x, 2.x, 3.x ]
+      branches: [HEAD, 1.x, 2.x, 3.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-hibernate-types
       branches: HEAD
@@ -143,7 +145,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jpastreamer.git
-      branches: [ HEAD, 1.x ]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jsch
       branches: HEAD
@@ -179,22 +181,22 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-micrometer-registry.git
-      branches: [ HEAD, 1.x ]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-minio
-      branches: [ HEAD, 2.9.x ]
+      branches: [HEAD, 2.9.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mockk.git
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mockserver
-      branches: [ HEAD, 0.x ]
+      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mongock.git
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mybatis.git
-      branches: [ HEAD, 1.x ]
+      branches: [HEAD, 1.x]
       start_path: mybatis/docs
     - url: https://github.com/quarkiverse/quarkus-neo4j
       branches: HEAD
@@ -218,13 +220,13 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-opentelemetry-exporter.git
-      branches: [ HEAD, 1.x ]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-operator-sdk
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-pact.git
-      branches: [ HEAD, quarkus-2-support ]
+      branches: [HEAD, quarkus-2-support]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-pdfbox.git
       branches: HEAD
@@ -233,10 +235,10 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-poi.git
-      branches: [ HEAD, 1.x ]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-pooled-jms
-      branches: [ HEAD, 2.3.x, 2.1.x, 1.x ]
+      branches: [HEAD, 2.3.x, 2.1.x, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-prettytime
       branches: HEAD
@@ -260,7 +262,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-renarde
-      branches: [ HEAD, 1.x ]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-scala3
       branches: HEAD
@@ -275,42 +277,37 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-tika
-      branches: [ HEAD, '{1..9}*({0..9})?(.+({0..9})).x' ]
+      branches: [HEAD, '{1..9}*({0..9})?(.+({0..9})).x']
       version:
         main: dev # fallback to using the matched refname as the value for other branches
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-unleash.git
-      branches: [ HEAD, 0.x ]
+      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-vault
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-web-bundler
-      branches: [ HEAD ]
+      branches: [HEAD]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-wiremock
-      branches: [ HEAD, 0.x ]
+      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zeebe
-      branches: [ HEAD, 0.x ]
+      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
-      branches: HEAD
-      start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-backstage
       branches: HEAD
       start_path: docs
 ui:
   bundle:
     url: https://github.com/quarkiverse/antora-ui-quarkiverse/releases/latest/download/ui-bundle.zip
     snapshot: true
-
 runtime:
   fetch: true
-
 asciidoc:
   attributes:
     kroki-fetch-diagram: true
