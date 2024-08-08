@@ -29,6 +29,8 @@ jobs:
           mv antora-playbook-sorted.yml antora-playbook.yml
 
       - name: Create Pull Request
+        # Skip main in forks
+        if: "github.repository == 'quarkiverse/quarkiverse-docs' && endsWith(github.ref, '/main')"
         run: |
           git checkout -b alpha-${{ github.run_id }}
           git add antora-playbook.yml
