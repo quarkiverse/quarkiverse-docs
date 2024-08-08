@@ -47,5 +47,7 @@ jobs:
           git add antora-playbook.yml
           git commit -m "Automatic alphabetisation"
           git push
-          gh pr create --title "Automatic alphabetisation"
+          gh pr create --title "Automatic alphabetisation" --fill --repo quarkiverse/quarkiverse-docs
+       env:
+       	  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
