@@ -28,6 +28,8 @@ jobs:
         # Skip main in forks
         if: "github.repository == 'quarkiverse/quarkiverse-docs' && endsWith(github.ref, '/main')"
         run: |
+          git config --global user.name "${GITHUB_ACTOR}"
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"          
           git checkout -b alpha-${{ github.run_id }}
           git add antora-playbook.yml
           git commit -m "Automatic alphabetisation"
