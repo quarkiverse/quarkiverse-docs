@@ -24,6 +24,10 @@ jobs:
         run: |
           yq '.content.sources |= sort_by(.url)' antora-playbook.yml > antora-playbook-sorted.yml
           mv antora-playbook-sorted.yml antora-playbook.yml
+      - name: Configure Git author
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
       - name: Create Pull Request
         # Skip main in forks
         if: "github.repository == 'quarkiverse/quarkiverse-docs' && endsWith(github.ref, '/main')"
