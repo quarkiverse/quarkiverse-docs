@@ -32,10 +32,10 @@ jobs:
         # Skip main in forks
         if: "github.repository == 'quarkiverse/quarkiverse-docs' && endsWith(github.ref, '/main')"
         run: |
-          git checkout -b alpha-${{ github.run_id }}
+          git checkout -b sorting-${{ github.run_id }}
           git add antora-playbook.yml
           git commit -m "Automatic alphabetisation"
-          git push
+          git push --set-upstream origin sorting-${{ github.run_id }}
           gh pr create --title "Automatic alphabetisation" --fill --repo $GITHUB_REPOSITORY
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
