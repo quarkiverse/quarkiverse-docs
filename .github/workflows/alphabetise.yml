@@ -32,14 +32,9 @@ jobs:
 
       - name: Alphabetise
         id: alpha
-        uses: mikefarah/yq@master
-        with:
-          path: antora-playbook.yml
-          cmd: '.content.sources |= sort_by(.url)'
-
-      - name: Overwite file
         run: |
-          echo ${{ steps.alpha.outputs.result }} > antora-playbook.yml
+          yq '.content.sources |= sort_by(.url)' antora-playbook.yml > antora-playbook-sorted.yml
+          mv antora-playbook-sorted.yml antora-playbook.yml
 
       - name: Create Pull Request
         run: |
