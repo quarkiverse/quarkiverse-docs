@@ -36,13 +36,16 @@ jobs:
         with:
           path: antora-playbook.yml
           cmd: '.content.sources |= sort_by(.url)'
+
       - name: Overwite file
         run: |
           echo ${{ steps.alpha.outputs.result }} > antora-playbook.yml
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: Automatic alphabetisation
-          add-paths: |
-            antora-playbook.yml
+        run: |
+          git checkout -b alpha-${{ github.run_id }}
+          git add antora-playbook.yml
+          git commit -m "Automatic alphabetisation"
+          git push
+          gh pr create --title "Automatic alphabetisation"
+
