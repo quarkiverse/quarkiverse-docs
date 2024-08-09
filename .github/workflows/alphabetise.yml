@@ -34,9 +34,15 @@ jobs:
         run: |
           git checkout -b sorting-${{ github.run_id }}
           git add antora-playbook.yml
-          git commit -m "Automatic alphabetisation"
-          git push --set-upstream origin sorting-${{ github.run_id }}
-          gh pr create --title "Automatic alphabetisation" --fill --repo $GITHUB_REPOSITORY
+          git update-index --really-refresh
+          if git diff-index --quiet HEAD
+          then
+            echo "Working tree is clean, so not doing anything."
+          else
+            git commit -m "Automatic alphabetisation"
+            git push --set-upstream origin sorting-${{ github.run_id }}
+            gh pr create --title "Automatic alphabetisation" --body "This commit was created by a script in the Alphabetise workflow." --repo $GITHUB_REPOSITORY
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
