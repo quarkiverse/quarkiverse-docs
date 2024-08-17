@@ -132,6 +132,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jdbi
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jdiameter
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jef
       branches: HEAD
       start_path: docs
