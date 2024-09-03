@@ -267,6 +267,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-renarde
       branches: [HEAD, 1.x]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-roq
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-scala3
       branches: HEAD
       start_path: docs
