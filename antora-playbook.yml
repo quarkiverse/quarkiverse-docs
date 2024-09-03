@@ -134,7 +134,7 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdiameter
       branches: HEAD
-      tags: [2.0.2]
+      tags: [v2.0.3]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jef
       branches: HEAD
