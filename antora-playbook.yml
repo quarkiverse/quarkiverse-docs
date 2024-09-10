@@ -313,7 +313,7 @@ content:
       start_path: docs
 ui:
   bundle:
-    url: https://github.com/quarkiverse/antora-ui-quarkiverse/releases/latest/download/ui-bundle.zip
+    url: https://github.com/smallrye/smallrye-antora-ui/raw/main/build/ui-bundle.zip
     snapshot: true
 runtime:
   fetch: true
