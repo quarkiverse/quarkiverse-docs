@@ -87,6 +87,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-freemarker.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-fury.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-fx.git
       branches: HEAD
       start_path: docs
