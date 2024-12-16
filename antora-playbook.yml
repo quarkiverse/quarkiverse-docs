@@ -198,6 +198,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mailpit
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-mcp-server
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mdns
       branches: HEAD
       start_path: docs
