@@ -14,6 +14,9 @@ content:
       version:
         main: dev # fallback to using the matched refname as the value for other branches
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-angus-mail
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-antivirus
       branches: HEAD
       start_path: docs
