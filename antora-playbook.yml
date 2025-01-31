@@ -299,7 +299,7 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-roq
       branches: HEAD
-      start_path: roq-docs
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-scala3
       branches: HEAD
       start_path: docs
