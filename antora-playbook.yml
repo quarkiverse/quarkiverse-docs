@@ -147,6 +147,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jdbc-sqlite
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jdbc-sqlite4j
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdbi
       branches: HEAD
       start_path: docs
