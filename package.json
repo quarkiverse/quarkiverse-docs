@@ -4,7 +4,8 @@
   "homepage": "https://docs.quarkiverse.io",
   "private": true,
   "scripts": {
-    "build": "_SEARCH_SERVICE_HOST='https://search.quarkus.io' antora antora-playbook.yml"
+    "build": "_SEARCH_SERVICE_HOST='https://search.quarkus.io' antora antora-playbook.yml",
+    "postbuild": "curl -sSLo build/site/_/js/vendor/search-wc.js https://search.quarkus.io/static/bundle/main.js"
   },
   "dependencies": {
     "antora": "~3.1.10",
