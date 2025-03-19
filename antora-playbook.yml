@@ -87,6 +87,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-file-vault
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-fluentjdbc
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-freemarker.git
       branches: HEAD
       start_path: docs
