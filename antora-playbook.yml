@@ -29,6 +29,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-arangodb-client
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-argocd
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-artemis
       branches: [HEAD, 3.5.x, 3.2.x]
       tags: [2.1.4, 3.0.7, 3.1.6]
