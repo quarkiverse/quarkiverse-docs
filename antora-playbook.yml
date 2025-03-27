@@ -81,6 +81,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-doma.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-docker-client
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-easy-retrofit
       branches: HEAD
       start_path: docs
