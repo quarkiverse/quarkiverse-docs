@@ -294,6 +294,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-primefaces
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-proxy-wasm
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-quinoa
       branches: HEAD
       start_path: docs
