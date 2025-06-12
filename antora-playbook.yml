@@ -367,6 +367,7 @@ runtime:
   fetch: true
 asciidoc:
   attributes:
+    page-pagination: '@'
     kroki-fetch-diagram: true
   extensions:
     - asciidoctor-kroki
