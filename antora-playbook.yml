@@ -48,6 +48,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-barcode
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-batik
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-bucket4j
       branches: HEAD
       start_path: docs
