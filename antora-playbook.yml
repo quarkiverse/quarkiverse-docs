@@ -365,6 +365,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
       start_path: docs
+    - url: https://github.com/casdoor/quarkus-casdoor-auth
+      branches: HEAD
+      start_path: docs
 ui:
   bundle:
     url: https://github.com/quarkiverse/antora-ui-quarkiverse/releases/latest/download/ui-bundle.zip
