@@ -354,7 +354,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-web-bundler
-      branches: [HEAD]
+      branches: [1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-wiremock
       branches: [HEAD, 0.x]
