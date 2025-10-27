@@ -41,14 +41,14 @@ jobs:
           echo ${{ github.event.number }} > ./pr/pr-id.txt
 
       - name: Upload PR id as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: pr-id
           path: pr
           retention-days: 1
 
       - name: Upload site as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: site
           path: build/site
