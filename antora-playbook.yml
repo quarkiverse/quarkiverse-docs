@@ -156,6 +156,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jasperreports
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jberet
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdbc-clickhouse
       branches: HEAD
       start_path: docs
