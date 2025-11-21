@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Install Node.js
         uses: actions/setup-node@v6
@@ -67,7 +67,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v5 # not needed for the code, but needed for the git config
+      - uses: actions/checkout@v6 # not needed for the code, but needed for the git config
 
       - name: Download Built site
         uses: actions/download-artifact@v6
