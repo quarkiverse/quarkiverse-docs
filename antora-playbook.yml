@@ -3,10 +3,10 @@ site:
   url: https://docs.quarkiverse.io
   start_page: index::index.adoc
 content:
-#
-# Use alphanumerical ordering by URL for sources
-#
-  sources: 
+  #
+  # Use alphanumerical ordering by URL for sources
+  #
+  sources:
     - url: . # common module containing just the main index
       branches: HEAD
     - url: https://github.com/quarkiverse/quarkus-amazon-alexa
@@ -383,7 +383,6 @@ content:
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
       start_path: docs
-
 ui:
   bundle:
     url: https://github.com/quarkiverse/antora-ui-quarkiverse/releases/latest/download/ui-bundle.zip
