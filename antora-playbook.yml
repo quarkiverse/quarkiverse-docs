@@ -63,6 +63,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-cert-manager
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-chicory
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-config-extensions
       branches: HEAD
       start_path: docs
