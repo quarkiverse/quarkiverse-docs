@@ -9,6 +9,9 @@ content:
   sources:
     - url: . # common module containing just the main index
       branches: HEAD
+    - url: https://github.com/quarkiverse/quarkus-aesh
+      branches: HEAD
+      start_path: docs      
     - url: https://github.com/quarkiverse/quarkus-amazon-alexa
       branches: HEAD
       start_path: docs
