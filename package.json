@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "_SEARCH_SERVICE_HOST='https://search.quarkus.io' antora antora-playbook.yml",
-    "postbuild": "curl -sSLo build/site/_/js/vendor/search-wc.js https://search.quarkus.io/static/bundle/main.js"
+    "postbuild": "curl -sSLo build/site/_/js/vendor/search-wc.js https://search.quarkus.io/static/bundle/app.js"
   },
   "dependencies": {
     "antora": "~3.1.14",
