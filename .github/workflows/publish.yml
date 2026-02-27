@@ -70,7 +70,7 @@ jobs:
       - uses: actions/checkout@v6 # not needed for the code, but needed for the git config
 
       - name: Download Built site
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: site
           path: _site
