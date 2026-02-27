@@ -153,6 +153,8 @@ content:
     - url: https://github.com/quarkiverse/quarkus-ironjacamar
       branches: HEAD
       start_path: docs
+      version:
+        main: dev # fallback to using the matched refname as the value for other branches
     - url: https://github.com/quarkiverse/quarkus-itext
       branches: HEAD
       start_path: docs
@@ -240,6 +242,8 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mcp-server
       branches: [HEAD, 1.8.x, 1.9.x, 1.10.x]
       start_path: docs
+      version:
+        main: dev # fallback to using the matched refname as the value for other branches
     - url: https://github.com/quarkiverse/quarkus-mdns
       branches: HEAD
       start_path: docs
