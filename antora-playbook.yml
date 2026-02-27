@@ -393,6 +393,8 @@ ui:
   bundle:
     url: https://github.com/quarkiverse/antora-ui-quarkiverse/releases/latest/download/ui-bundle.zip
     snapshot: true
+urls:
+  redirect_facility: static
 runtime:
   fetch: true
 asciidoc:
