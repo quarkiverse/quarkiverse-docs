@@ -316,7 +316,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-prettytime
-      branches: [HEAD, 2.x]
+      branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-primefaces
       branches: HEAD
