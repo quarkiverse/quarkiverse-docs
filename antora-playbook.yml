@@ -204,6 +204,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jsch
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-json-rpc
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-kafka-streams-processor.git
       branches: HEAD
       start_path: docs
