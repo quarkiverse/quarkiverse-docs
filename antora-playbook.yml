@@ -114,6 +114,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-fluentjdbc
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-fluss.git
+      branches: [main]
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-fory.git
       branches: HEAD
       start_path: docs
