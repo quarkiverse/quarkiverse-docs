@@ -288,6 +288,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-openfga-client.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-openid-ssf.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-opensearch.git
       branches: HEAD
       start_path: docs
