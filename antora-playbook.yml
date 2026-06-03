@@ -267,6 +267,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mockserver
       branches: [HEAD, 0.x]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-multitenancy
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mongock.git
       branches: HEAD
       start_path: docs
