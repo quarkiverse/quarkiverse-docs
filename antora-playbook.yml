@@ -250,7 +250,7 @@ content:
       branches: [HEAD]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mcp-server
-      branches: [HEAD, 1.10.x, 1.11.x, 1.12.x]
+      branches: [HEAD, 1.10.x, 1.12.x, 1.13.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mdns
       branches: HEAD
