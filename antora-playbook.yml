@@ -321,6 +321,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-pdfbox.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-pi4j.git
+      branches: [main]
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-playwright.git
       branches: HEAD
       start_path: docs
@@ -415,9 +418,6 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
-      start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-pi4j.git
-      branches: [main]
       start_path: docs
 ui:
   bundle:
