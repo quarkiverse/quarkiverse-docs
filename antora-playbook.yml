@@ -153,6 +153,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-hivemq-client
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-http-idempotency
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-infinispan-embedded
       branches: HEAD
       start_path: docs
