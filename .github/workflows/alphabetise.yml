@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Alphabetise
         run: |
           yq '.content.sources |= sort_by(.url)' antora-playbook.yml > antora-playbook-sorted.yml
