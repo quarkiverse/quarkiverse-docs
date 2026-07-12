@@ -393,6 +393,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-smallrye-opentracing
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-snappy
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-solr
       branches: HEAD
       start_path: docs
