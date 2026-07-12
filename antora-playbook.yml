@@ -387,6 +387,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-shedlock
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-shim
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-smallrye-opentracing
       branches: HEAD
       start_path: docs
