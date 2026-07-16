@@ -66,6 +66,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-chicory
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-camunda
+      branches: [HEAD, 1.x, 0.x]
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-config-extensions
       branches: HEAD
       start_path: docs
@@ -424,9 +427,6 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
-      start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-zeebe
-      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
