@@ -48,6 +48,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-backstage
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-banner
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-barcode
       branches: HEAD
       start_path: docs
