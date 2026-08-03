@@ -48,6 +48,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-backstage
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-banner
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-barcode
       branches: HEAD
       start_path: docs
@@ -65,6 +68,9 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-chicory
       branches: HEAD
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-camunda
+      branches: [HEAD, 1.x, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-config-extensions
       branches: HEAD
@@ -178,6 +184,9 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdbc-clickhouse
+      branches: HEAD
+      start_path: docs
+    - url: https://github.com/rmannibucau/quarkus-jdbc-generic
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdbc-singlestore
@@ -424,9 +433,6 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
-      start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-zeebe
-      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zookeeper-client
       branches: HEAD
