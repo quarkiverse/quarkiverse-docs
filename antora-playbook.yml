@@ -186,6 +186,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jdbc-clickhouse
       branches: HEAD
       start_path: docs
+    - url: https://github.com/rmannibucau/quarkus-jdbc-generic
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdbc-singlestore
       branches: HEAD
       start_path: docs
