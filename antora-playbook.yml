@@ -141,6 +141,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-github-app.git
       branches: [HEAD]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-goblin
+      branches: HEAD
+      start_path: docs      
     - url: https://github.com/quarkiverse/quarkus-google-cloud-services
       branches: HEAD
       start_path: docs
