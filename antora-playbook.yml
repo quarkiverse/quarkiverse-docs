@@ -142,8 +142,11 @@ content:
       branches: [HEAD]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-goblin
-      branches: HEAD
-      start_path: docs      
+      branches: [HEAD, '{1..9}*({0..9})?(.+({0..9})).x']
+      tags: [0.1.0]
+      version:
+        main: dev # fallback to using the matched refname as the value for other branches
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-google-cloud-services
       branches: HEAD
       start_path: docs
