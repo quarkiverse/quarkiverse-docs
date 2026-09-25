@@ -194,6 +194,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jdbc-edb
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jdbc-generic
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jdbc-singlestore
       branches: HEAD
       start_path: docs
