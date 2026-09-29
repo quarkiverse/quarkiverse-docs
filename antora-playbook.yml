@@ -93,6 +93,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-db-scheduler.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-desktop.git
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-discord4j.git
       branches: HEAD
       start_path: docs
