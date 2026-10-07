@@ -66,6 +66,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-camunda
       branches: [HEAD, 1.x, 0.x]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-casdoor-auth
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-cert-manager
       branches: HEAD
       start_path: docs
