@@ -296,6 +296,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mongock.git
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-mongodb
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-multitenancy
       branches: HEAD
       start_path: docs
