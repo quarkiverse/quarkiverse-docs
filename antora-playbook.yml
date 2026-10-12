@@ -433,6 +433,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-systemd-notify
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-tekton
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-telemetry-ai
       branches: HEAD
       start_path: docs
