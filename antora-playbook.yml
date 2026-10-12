@@ -144,6 +144,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-github-action.git
       branches: [HEAD]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-github-api.git
+      branches: [HEAD]
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-github-app.git
       branches: [HEAD]
       start_path: docs
