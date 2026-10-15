@@ -230,6 +230,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-jgrapht
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-jms
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-jnosql
       branches: HEAD
       start_path: docs
