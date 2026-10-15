@@ -158,6 +158,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-google-cloud-services
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-graalpy
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-groovy.git
       branches: HEAD
       start_path: docs
