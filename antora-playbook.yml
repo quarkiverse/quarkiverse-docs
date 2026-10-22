@@ -9,6 +9,9 @@ content:
   sources:
     - url: . # common module containing just the main index
       branches: HEAD
+    - url: https://github.com/quarkiverse/quarkus-ai-rca
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-amazon-alexa
       branches: HEAD
       start_path: docs
@@ -440,9 +443,6 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-tekton
-      branches: HEAD
-      start_path: docs
-    - url: https://github.com/quarkiverse/quarkus-telemetry-ai
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-temporal
