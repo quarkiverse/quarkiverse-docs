@@ -486,5 +486,6 @@ asciidoc:
   attributes:
     page-pagination: '@'
     kroki-fetch-diagram: true
+    kroki-http-method: post
   extensions:
     - asciidoctor-kroki
