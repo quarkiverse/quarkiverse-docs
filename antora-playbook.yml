@@ -411,7 +411,9 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-reactive-messaging-nats-jetstream
       branches: HEAD
-      start_path: docs
+      start_paths:
+        - client/docs
+        - messaging/docs
     - url: https://github.com/quarkiverse/quarkus-redoc
       branches: [HEAD]
       start_path: docs
