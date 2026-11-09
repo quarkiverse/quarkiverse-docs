@@ -8,7 +8,7 @@
     "postbuild": "curl -sSLo build/site/_/js/vendor/search-wc.js https://search.quarkus.io/static/bundle/app.js"
   },
   "dependencies": {
-    "antora": "~3.2.1"
+    "antora": "~3.2.2"
   },
   "repository": {
     "type": "git",
