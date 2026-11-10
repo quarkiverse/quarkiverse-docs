@@ -448,6 +448,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-solr
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-sonify
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-systemd-notify
       branches: HEAD
       start_path: docs
