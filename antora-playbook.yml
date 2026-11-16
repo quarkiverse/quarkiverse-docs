@@ -360,7 +360,9 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-oras
-      branches: HEAD
+      branches: [HEAD, 0.8.x]
+      version:
+        main: dev # fallback to using the matched refname as the value for other branches
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-pact.git
       branches: [HEAD, quarkus-2-support]
