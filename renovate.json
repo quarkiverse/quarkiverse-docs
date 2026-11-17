@@ -2,5 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>quarkiverse/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "Node.js follows what Antora supports (antora 3.2.x declares engines.node >=20), not Node's own release cadence. When an Antora update PR raises that floor, bump .nvmrc and the setup-node version in publish.yml by hand. Covers both, since the github-actions manager extracts the setup-node input on the same node-version datasource.",
+      "matchDatasources": ["node-version"],
+      "enabled": false
+    }
   ]
 }
