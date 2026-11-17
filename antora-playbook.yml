@@ -293,6 +293,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mapstruct
       branches: [HEAD]
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-mateu
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mcp-server
       branches: [HEAD, 1.10.x, 1.13.x, 2.0.x]
       start_path: docs
