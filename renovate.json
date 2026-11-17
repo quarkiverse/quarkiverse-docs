@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>quarkiverse/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "description": "Node.js follows what Antora supports (antora 3.2.x declares engines.node >=20), not Node's own release cadence. When an Antora update raises that floor, bump .nvmrc and the setup-node version in publish.yml by hand. Matched on depName because the two pins arrive on different datasources: .nvmrc via node-version, and the setup-node input via github-releases (actions/node-versions).",
+      "matchDepNames": ["node"],
+      "enabled": false
+    }
+  ]
+}
