@@ -315,7 +315,7 @@ content:
       branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-modulith
-      branches: [HEAD, 3.40.x]
+      branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mongock.git
       branches: HEAD
