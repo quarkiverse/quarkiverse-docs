@@ -1,0 +1,37 @@
+name: Surge.sh Teardown Trigger
+
+# Unprivileged half of the preview teardown.
+#
+# GitHub blocks `pull_request_target` by default in public repositories from
+# December 2, 2026, so the teardown is split in two: this workflow runs with a
+# read-only token and no secrets and only records which PR was closed, while
+# "Surge.sh Teardown" picks that up via `workflow_run` and does the privileged
+# work from the default branch.
+
+on:
+  pull_request:
+    types: [ closed ]
+
+defaults:
+  run:
+    shell: bash
+
+permissions: {}
+
+jobs:
+  store-pr-id:
+    runs-on: ubuntu-latest
+    steps:
+      # Deliberately no checkout: nothing from the pull request is needed here,
+      # and the merge ref is gone once the PR is closed.
+      - name: Store PR id
+        env:
+          PR_NUMBER: ${{ github.event.number }}
+        run: echo "$PR_NUMBER" > pr-id.txt
+
+      - name: Upload PR id as artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: pr-id
+          path: pr-id.txt
+          retention-days: 1

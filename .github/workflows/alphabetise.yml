@@ -44,7 +44,7 @@ jobs:
           else
             git commit -m "Automatic alphabetisation"
             git push --set-upstream origin sorting-${{ github.run_id }}
-            gh pr create --title "Automatic alphabetisation" --body "This commit was created by a script in the Alphabetise workflow." --repo $GITHUB_REPOSITORY
+            gh pr create --title "Automatic alphabetisation" --body "This commit was created by a script in the Alphabetise workflow." --repo "$GITHUB_REPOSITORY"
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

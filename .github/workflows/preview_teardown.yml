@@ -1,25 +1,63 @@
 name: Surge.sh Teardown
 
+# Privileged half of the preview teardown, triggered by "Surge.sh Teardown Trigger".
+#
+# `workflow_run` always runs the workflow file from the default branch, so the
+# Surge token and the write-enabled token are never exposed to pull request
+# code. Anything coming from the triggering run is untrusted input.
+
 on:
-  pull_request_target:
-    # when using teardown: 'true', add default event types + closed event type
-    types: [closed]
+  workflow_run:
+    workflows: [ "Surge.sh Teardown Trigger" ]
+    types:
+      - completed
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
-  preview:
+  teardown:
     runs-on: ubuntu-latest
+    if: github.event.workflow_run.event == 'pull_request' && github.event.workflow_run.conclusion == 'success'
     permissions:
+      actions: read        # Required to download the artifact of the triggering run
       pull-requests: write # Required to update PR status comment
     steps:
+      - name: Download PR id artifact
+        uses: actions/download-artifact@v8
+        with:
+          name: pr-id
+          path: ${{ runner.temp }}/pr
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Read PR id
+        id: pr
+        env:
+          PR_ID_FILE: ${{ runner.temp }}/pr/pr-id.txt
+        run: |
+          # A fork controls the workflow file that produced this artifact, so
+          # the id is validated before it reaches a command or an API call.
+          id=$(head -c 32 "$PR_ID_FILE" | tr -d '[:space:]')
+          if [[ ! $id =~ ^[1-9][0-9]{0,8}$ ]]; then
+            echo "::error::Unexpected PR id in artifact: '${id}'"
+            exit 1
+          fi
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+
       - name: Teardown surge preview
-        id: deploy
-        run: npx surge teardown https://quarkiverse-docs-pr-${{ github.event.number }}-preview.surge.sh --token ${{ secrets.SURGE_TOKEN }} || true
+        env:
+          PR_ID: ${{ steps.pr.outputs.id }}
+          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+        run: npx surge teardown "https://quarkiverse-docs-pr-${PR_ID}-preview.surge.sh" --token "$SURGE_TOKEN" || true
+
       - name: Update PR status comment
         uses: quarkusio/action-helpers@main
         with:
           action: maintain-one-comment
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-number: ${{ github.event.number }}
+          pr-number: ${{ steps.pr.outputs.id }}
           body: |
             🙈 The PR is closed and the preview is expired.
           body-marker: <!-- Preview status comment marker -->
