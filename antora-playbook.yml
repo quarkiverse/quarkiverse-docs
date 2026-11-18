@@ -302,6 +302,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-mdns
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-messaging-outbox
+      branches: HEAD
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-micrometer-registry.git
       branches: [HEAD, 1.x]
       start_path: docs
