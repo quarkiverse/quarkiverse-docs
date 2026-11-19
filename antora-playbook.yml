@@ -487,6 +487,9 @@ content:
     - url: https://github.com/quarkiverse/quarkus-vault
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-verifiable-credentials
+      branches: HEAD
+      start_path: docs      
     - url: https://github.com/quarkiverse/quarkus-web-bundler
       branches: [HEAD, 1.x]
       start_path: docs
