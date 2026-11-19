@@ -6,8 +6,7 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
-  pull_request:
-    types: [ opened, synchronize, reopened ]
+  # Pull requests are built (trimmed) by preview-build.yml instead.
 
 defaults:
   run:

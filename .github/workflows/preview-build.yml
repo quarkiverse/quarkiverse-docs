@@ -1,0 +1,91 @@
+name: Preview build
+
+# Unprivileged half of the PR preview. It runs with a read-only token and no
+# secrets, builds a trimmed copy of the site (see preview/README.md) and
+# uploads it. "Preview deploy" picks the artifacts up via workflow_run and
+# publishes them to Surge, or tears the preview down when the PR is closed.
+#
+# Extension repositories can call this as a reusable workflow from their own
+# pull_request workflow. The extension's docs are then built from the PR
+# checkout, inside the current docs.quarkiverse.io site.
+
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened, closed ]
+  workflow_call:
+
+defaults:
+  run:
+    shell: bash
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    concurrency:
+      group: preview-build-${{ github.repository }}-${{ github.event.number }}
+      cancel-in-progress: true
+    env:
+      # Called from another repository: build that repository's docs from the PR.
+      COMPONENT: ${{ github.repository != 'quarkiverse/quarkiverse-docs' }}
+    steps:
+      # Nothing is passed to "Preview deploy" except the site: it identifies the
+      # PR from the workflow_run metadata, which a fork can't tamper with, and
+      # tears the preview down if that PR is closed.
+      - name: Closed PR, nothing to build
+        if: github.event.action == 'closed'
+        run: echo "The preview will be torn down by Preview deploy."
+
+      # In this repository this is the PR itself; anywhere else it is the default branch.
+      - name: Check out quarkiverse-docs
+        if: github.event.action != 'closed'
+        uses: actions/checkout@v7
+        with:
+          repository: quarkiverse/quarkiverse-docs
+          path: site
+          persist-credentials: false
+
+      - name: Check out the calling repository's PR
+        if: github.event.action != 'closed' && env.COMPONENT == 'true'
+        uses: actions/checkout@v7
+        with:
+          path: component
+          persist-credentials: false
+
+      - name: Install Node.js
+        if: github.event.action != 'closed'
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Install packages
+        if: github.event.action != 'closed'
+        working-directory: site
+        run: npm i
+
+      - name: Generate trimmed site
+        if: github.event.action != 'closed'
+        working-directory: site
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          if [[ $COMPONENT == true ]]; then
+            preview/build.sh --component "https://github.com/${REPOSITORY}=${GITHUB_WORKSPACE}/component"
+          else
+            # Sources added or edited by the PR are compared against the base branch and kept whole.
+            git fetch --depth 1 origin "$BASE_REF"
+            git show FETCH_HEAD:antora-playbook.yml > "$RUNNER_TEMP/base-playbook.yml"
+            preview/build.sh --base "$RUNNER_TEMP/base-playbook.yml"
+          fi
+
+      - name: Upload site as artifact
+        if: github.event.action != 'closed'
+        uses: actions/upload-artifact@v7
+        with:
+          name: site
+          path: site/build/site
+          retention-days: 1
