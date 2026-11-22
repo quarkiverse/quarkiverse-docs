@@ -324,7 +324,7 @@ content:
       branches: HEAD
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-mongodb
-      branches: HEAD
+      branches: [HEAD, 0.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-multitenancy
       branches: HEAD
