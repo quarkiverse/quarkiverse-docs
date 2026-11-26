@@ -494,7 +494,7 @@ content:
       branches: [HEAD, 1.x]
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-wiremock
-      branches: [HEAD, 0.x]
+      branches: [HEAD, '{1..9}*({0..9})?(.+({0..9})).x']
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
