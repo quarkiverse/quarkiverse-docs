@@ -495,6 +495,8 @@ content:
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-wiremock
       branches: [HEAD, '{1..9}*({0..9})?(.+({0..9})).x']
+      version:
+        main: dev # fallback to using the matched refname as the value for other branches      
       start_path: docs
     - url: https://github.com/quarkiverse/quarkus-zanzibar.git
       branches: HEAD
