@@ -415,6 +415,20 @@ content:
     - url: https://github.com/quarkiverse/quarkus-qute-server-pages
       branches: HEAD
       start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-queryable
+      branches: [HEAD, 3.x]
+      version:
+        main: dev
+        3.x: '3.x'
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-queryable
+      tags: [3.16]
+      version: '3.16'
+      start_path: docs
+    - url: https://github.com/quarkiverse/quarkus-queryable
+      tags: [4.0.3]
+      version: '4.0.3'
+      start_path: docs
     - url: https://github.com/quarkiverse/quarkus-rabbitmq-client.git
       branches: [HEAD, '{1..9}*({0..9})?(.+({0..9})).x']
       version:
